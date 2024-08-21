@@ -35,7 +35,8 @@ export class ExperienceComponent implements OnInit {
 
            descBullets: [
       {
-        url: "https://www.youtube.com/embed/AEy1Xk0Kfxg",
+        url: "https://www.youtube.com/embed/emunPOTU9hs",
+
         title: "Introduction to Comparastore",
         description: "A brief introduction to the features and functionalities of Comparastore."
       },
@@ -56,17 +57,17 @@ export class ExperienceComponent implements OnInit {
             desc: "Led the development of user interfaces and backend services.",
             companyUrl: "https://www.openbookplatform.com" ,
 
-            descBullets: [
-              {
-                url: "https://www.youtube.com/embed/AEy1Xk0Kfxg",
-                title: "Introduction to Comparastore",
-                description: "A brief introduction to the features and functionalities of Comparastore."
-              },
-              {
-                url: "https://www.youtube.com/embed/-2_eGnBrkRI",
-                title: "Comparastore Version 2.0",
-                description: "Overview of the improvements made in version 2.0."
-              }
+            descBullets: [ 
+              // {
+              //   url: "https://www.youtube.com/embed/emunPOTU9hs",
+              //   title: "Introduction to Comparastore",
+              //   description: "A brief introduction to the features and functionalities of Comparastore."
+              // },
+              // {
+              //   url: "https://www.youtube.com/embed/-2_eGnBrkRI",
+              //   title: "Comparastore Version 2.0",
+              //   description: "Overview of the improvements made in version 2.0."
+              // }
             ]
             // descBullets: [
             //  //    openbookplatform.com
@@ -89,17 +90,17 @@ export class ExperienceComponent implements OnInit {
             desc: "Control via Android Application",
             companyUrl: "https://www.polymtl.ca/programmes/cours/projet-integrateur-final-en-genie-logiciel" ,
 
-            descBullets: [
+            descBullets: [  
               {
-                url: "https://www.youtube.com/embed/AEy1Xk0Kfxg",
+                url: "https://www.youtube.com/embed/rzRli4YbGXU",
                 title: "Introduction to Comparastore",
                 description: "A brief introduction to the features and functionalities of Comparastore."
               },
-              {
-                url: "https://www.youtube.com/embed/-2_eGnBrkRI",
-                title: "Comparastore Version 2.0",
-                description: "Overview of the improvements made in version 2.0."
-              }
+              // {
+              //   url: "https://www.youtube.com/embed/-2_eGnBrkRI",
+              //   title: "Comparastore Version 2.0",
+              //   description: "Overview of the improvements made in version 2.0."
+              // }
             ]
           },
           {
@@ -111,14 +112,14 @@ export class ExperienceComponent implements OnInit {
            
             date: "3rd Year Project",
             desc: "Development of a Multiplayer Application (Web and Mobile)",
-            descBullets: [
+            descBullets: [ 
               {
-                url: "https://www.youtube.com/embed/AEy1Xk0Kfxg",
+                url: "https://www.youtube.com/embed/smp7Iczqpeo",
                 title: "Introduction to Comparastore",
                 description: "A brief introduction to the features and functionalities of Comparastore."
               },
               {
-                url: "https://www.youtube.com/embed/-2_eGnBrkRI",
+                url: "https://www.youtube.com/embed/i8xGl_pzEqY",
                 title: "Comparastore Version 2.0",
                 description: "Overview of the improvements made in version 2.0."
               }

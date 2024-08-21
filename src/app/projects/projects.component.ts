@@ -11,7 +11,7 @@ export class ProjectsComponent implements OnInit {
   projects2 = [];
   projects3 = [
     {
-      link: "https://github.com/sarthakgoenka/portfolio",
+      link: "https://github.com/saboubh/samir",
     },
     {
       link: "",
