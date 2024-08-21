@@ -1,0 +1,45 @@
+.dev-icons {
+  padding-left: 0;
+  list-style: none;
+  font-size: 3rem;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  text-align: center;
+}
+
+.software-skill-inline {
+  display: inline-block;
+  width: 30%; /* Adjust the width to display three elements per line */
+  margin-right: 1.5%; /* Add some spacing between elements */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Media query for smaller screens to display only two elements per line */
+@media (max-width: 768px) {
+  .software-skill-inline {
+    width: 45%; /* Adjust the width to display two elements per line */
+    margin-right: 5%;
+  }
+}
+
+.software-skill-inline > i {
+  color: #868e96;
+}
+
+.software-skill-inline > i:hover {
+  color: #645beb;
+}
+
+.software-skill-inline > p {
+  color: #868e96;
+  font-size: 10px;
+}
+
+.software-skill-inline > i:hover ~ p {
+  color: #645beb;
+}
+
+.subTitle {
+  color: #868e96;
+}
