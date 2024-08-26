@@ -1,0 +1,236 @@
+{
+  "ABOUT": "About",
+  "SKILLS": "Skills",
+  "EDUCATION": "Education",
+  "PROJECTS": "Projects",
+  "EXPERIENCES": "Experiences",
+  "CONTACT": "Contact Me",
+  
+  "greeting": {
+    "title": "Hello everyone, I'm Samir",
+    "subTitle": "I am a dedicated junior developer with a robust foundation in software engineering and practical experience in full-stack development. I am actively seeking an opportunity to apply my skills and expand my knowledge in a dynamic and innovative environment. My innate curiosity and adaptability equip me to address a wide range of technical challenges, whether in front-end or back-end development. I am particularly drawn to projects that encourage continuous learning and foster a collaborative work culture. I am eager to contribute meaningfully to a forward-thinking and dedicated team. If you're looking for a passionate developer committed to making a positive impact, I would love to connect :)"
+  },
+  "buttons": {
+    "contact": "Contact me",
+    "resume": "See my resume"
+  },
+  
+  "skillsSection": {
+    "title": "My Expertise",
+    "subTitle": "Passionate Full Stack Developer eager to explore and master diverse technology stacks to create innovative solutions.",
+    "skills": [
+      "✨ Develop highly interactive front-end/user interfaces for web and mobile applications using Angular, React, and Flutter",
+      "✨ Create robust application backends with Node.js, Express, and Spring Boot",
+      "✨ Design and implement Progressive Web Applications (PWA) in both standard and single-page application (SPA) stacks",
+      "✨ Integrate third-party services such as Firebase and AWS for enhanced application functionality",
+      "✨ Optimize application performance and ensure smooth deployment to production environments",
+      "✨ Collaborate with design teams to integrate new designs and enhance user experience",
+      "✨ Perform unit and server testing to ensure application reliability",
+      "✨ Develop secure authentication and authorization systems",
+      "✨ Write and execute complex SQL queries for data management and retrieval",
+      "✨ Participate in code reviews and brainstorming sessions to foster continuous improvement and innovation",
+      "✨ Manage real-time communication using WebSocket protocols for interactive applications",
+      "✨ Utilize DevOps practices for continuous integration and deployment (CI/CD)"
+    ]
+  },
+  
+  "timeline": {
+    "title": "Education",
+    "infosys": {
+      "heading": "Infosys",
+      "duration": "current",
+      "content": "Upcoming Full stack developer at Infosys!"
+    },
+    "btech": {
+      "heading": "B.Tech",
+      "duration": "2016 - 2020",
+      "content": "Successfully completed my B.Tech in Computer Science from GLA University, Mathura."
+    },
+    "intermediate": {
+      "heading": "Intermediate",
+      "duration": "2015-2016",
+      "content": "Successfully completed my intermediate studies in 2016 from Gyan Deep Sr. Secondary Public School, Shikohabad. Major: PCM."
+    },
+    "highSchool": {
+      "heading": "High School",
+      "duration": "2013-2014",
+      "content": "Successfully completed my high school studies in 2014 from Georgions Academy, Shikohabad."
+    }
+  },
+  
+  "education": {
+    "title": "Education 💻",
+    "bachelorSoftwareEngineering": {
+      "heading": "B.Eng Bachelor of Software Engineering",
+      "duration": "2023",
+      "subtitle": "Polytechnique Montreal -Technological University (QC) -",
+      "content": "Successfully completed"
+    },
+    "specializedGraduateDiploma": {
+      "heading": "Specialized Graduate Diploma in Industrial Engineering",
+      "duration": "2014",
+      "subtitle": "Laval University (QC)",
+      "content": "Successfully completed."
+    },
+    "bachelorChemicalEngineering": {
+      "heading": "B.Eng Bachelor of Chemical Engineering",
+      "duration": "2007",
+      "subtitle": "Larbi Ben M’Hidi University -Algeria-",
+      "content": "Successfully completed"
+    }
+  },
+    "skillProgress": {
+      "proficiency": "Proficiency",
+      "frontendDesign": "Frontend/Design",
+      "backend": "Backend",
+      "databaseManagement": "Database Management",
+      "systemArchitecture": "System Architecture",
+      "apiDevelopment": "API Development",
+      "ciCd": "(CI/CD)",
+      "agileMethodologies": "Agile Methodologies",
+      "problemSolving": "Problem Solving",
+      "mobileDevelopment": "Mobile Development",
+      "softwareTestingQa": "Software Testing/QA",
+      "programming": "Programming",
+      "writingReports": "Writing Reports",
+      "machineLearningAi": "Machine Learning/AI",
+      "devOps": "DevOps",
+      "dataAnalysis": "Data Analysis",
+      "cloudComputing": "Cloud Computing",
+      "cybersecurity": "Cybersecurity",
+      "embeddedSystems": "Embedded Systems",
+      "networking": "Networking"
+    
+  },
+  
+  
+    "experience": {
+      "title": "Experiences",
+      "seeMore": "See More",
+      "details": "Experience Details",
+      "close": "Close",
+      
+      "fullStackDeveloper": {
+        "role": "Full Stack Developer",
+        "company": "Comparastore",
+        "date": "June 2023 – December 2023",
+        "desc1": "✨ Collaborated with the team to understand the specific requirements of version 2.0 of the Comparastore dashboard.",
+        "desc2": "✨ Evaluated existing features and identified necessary improvements.",
+        "desc3": "✨ Set up the backend of the dashboard using Next.js.",
+        "desc4": "✨ Created robust APIs to support the application's features and ensure optimal performance.",
+        "desc5": "✨ Integrated features and user interfaces into the dashboard using Next.js.",
+        "desc6": "✨ Participated in the deployment process of the application to production.",
+        "bullet1": {
+          "title": "Filter, Booking, and Chat",
+          "description": "A warehouse admin can view all bookings and filter them based on various criteria, such as customer name, booking number, and other relevant details. Additionally, the admin can update or add comprehensive information to each booking and access the full history of interactions between the client and the warehouse."
+        },
+        "bullet2": {
+          "title": "Analytics",
+          "description": "An admin can view all detailed analytics for each warehouse and compare them by selecting from a list. This information is available across four different pages: Summary, Acquisition, Conversion, and Satisfaction."
+        }
+      },
+  
+      "programmerAnalyst": {
+        "role": "Programmer Analyst",
+        "company": "OpenBook",
+        "date": "February 2019 – January 2021",
+        "desc1": "✨ Created the user interface using Angular, ensuring responsiveness and user-friendliness.",
+        "desc2": "✨ Designed the Firebase database structure according to the application's requirements.",
+        "desc3": "✨ Configured and developed the backend server with Node.js.",
+        "desc4": "✨ Implemented features allowing users to post ads with details, images, and availability.",
+        "desc5": "✨ Set up a secure authentication and authorization system using Firebase.",
+        "desc6": "✨ Conducted unit and server testing.",
+        "desc7": "✨ Deployed the application to production.",
+        "photoList": [
+          { "title": "OpenBook", "filename": "../../../assets/images/ob1.png", "description": "Musician Dashboard" },
+          { "title": "OpenBook", "filename": "../../../assets/images/ob2.jpg", "description": "Chat" }
+        ]
+      },
+  
+      
+        "softwareEngineer": {
+          "role": "Software Engineer",
+          "company": "Poly Technical",
+          "date": "Vehicle Powered by Android",
+          "desc1": "✨ Implemented server-side functionalities in C to respond to requests from the Android application (Kotlin).",
+          "desc2": "✨ Developed Kotlin application-side functionalities to interact with the server.",
+          "desc3": "✨ Sent requests via Socket from the Kotlin application.",
+          "desc4": "✨ Appropriately processed responses on the application side.",
+          "bullet1": {
+            "title": "SMOL: The Autonomous Vehicle Powered by Android",
+            "description": "SMOL is our custom-built autonomous vehicle, seamlessly controlled via our Android application. Designed for efficiency and precision, SMOL is a cutting-edge example of smart mobility in action."
+          },
+          "photoList1": {
+            "title": "SMOL APP",
+            "description": "SMOL Application"
+          },
+          "photoList2": {
+            "title": "SMOL TEAM",
+            "description": "SMOL team with the professor"
+          }
+        }
+      ,
+      
+  
+      "scrabbleDeveloper": {
+        "role": "Full Stack Developer",
+        "company": "Poly Technical",
+        "date": "Multiplayer Scrabble Game",
+        "desc1": "✨ Designed and developed a multiplayer game application with real-time chat features.",
+        "desc2": "✨ Developed the mobile version using Flutter (Dart).",
+        "desc3": "✨ Developed the web version using Angular.",
+        "desc4": "✨ Used MongoDB for data storage and management.",
+        "desc5": "✨ Set up a server with Node.js.",
+        "desc6": "✨ Implemented a user authentication system.",
+        "desc7": "✨ Saved chat data and maintained chat history.",
+        "desc8": "✨ Wrote Software Requirements Specification (SRS) documents.",
+        "desc9": "✨ Created software development plans.",
+        "desc10": "✨ Prepared test reports.",
+        "desc11": "✨ Designed architectural plans.",
+        "bullet1": {
+          "title": "Web App",
+          "description": ""
+        },
+        "bullet2": {
+          "title": "Android App",
+          "description": ""
+        }
+      },
+  
+      "secondYearProject": {
+        "role": "Full Stack Developer",
+        "company": "Poly Technical",
+        "date": "Second Year Project",
+        "desc1": "✨ Developed the first version of a two-player Scrabble game.",
+        "desc2": "✨ Used Angular with TypeScript for frontend development.",
+        "desc3": "✨ Set up a server using Node.js.",
+        "desc4": "✨ No database integration, so no history or authentication features.",
+        "desc5": "✨ Focused on real-time gameplay between two players."
+      },
+  
+      "firstYearProject": {
+        "role": "Full Stack Developer",
+        "company": "Poly Technical",
+        "date": "First Year Project",
+        "desc1": "✨ Programmed an autonomous robot using C.",
+        "desc2": "✨ Enabled the robot to avoid obstacles.",
+        "desc3": "✨ Implemented functionality to send alerts."
+      }
+    },
+
+    
+      "contact": {
+        "title": "Contact Me:",
+        "subtitle": "Want to collaborate on a project or just say hello? I'm all ears and my inbox is open!",
+        "number": "+1 514 567 5658",
+        "email_address": "samir.boussaadi24@gmail.com"
+      },
+    
+    
+      
+        "footer": {
+          "text": "© 2024, Built with ❤️ by Samir Boussaadi"
+        }
+      }
+      
+  
