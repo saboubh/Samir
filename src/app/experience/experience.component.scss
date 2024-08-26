@@ -7,9 +7,13 @@
 }
 
 .experience-heading {
+ 
   font-size: 56px;
   font-weight: 400;
   margin-bottom: 2rem;
+  display: flex;              /* Active le mode Flexbox */
+  justify-content: center;    /* Centre le contenu horizontalement */
+  align-items: center; 
 }
 
 .experience-container {
@@ -22,6 +26,7 @@
 
 .experience-container>* {
   flex: 1;
+  margin-top: 100px;
 }
 
 /* Media Query */

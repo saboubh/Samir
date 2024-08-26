@@ -1,6 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import ngColorThief from 'angular-colorthief';
+
 @Component({
   selector: 'app-experience-card',
   templateUrl: './experience-card.component.html',
@@ -9,20 +9,20 @@ import ngColorThief from 'angular-colorthief';
 export class ExperienceCardComponent implements OnInit {
   isModalActive = false;
   @Input() experience: any;
-  isExpanded: boolean = false;  
+  isExpanded: boolean = false;
+
   constructor(private sanitizer: DomSanitizer) {}
+
   getSafeUrl(url: string): SafeResourceUrl {
-    console.log("samir111" + this.sanitizer.bypassSecurityTrustResourceUrl(url));
-
-    return this.sanitizer.bypassSecurityTrustResourceUrl(url);  
-
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
+
   toggleDetails() {
     this.isExpanded = !this.isExpanded;
   }
-  // angular.module('yourApp', ['ngColorThief'])
-  ngOnInit(): void {
-  }
+
+  ngOnInit(): void {}
+
   openModal() {
     this.isModalActive = true;
   }
@@ -30,5 +30,4 @@ export class ExperienceCardComponent implements OnInit {
   closeModal() {
     this.isModalActive = false;
   }
-
 }

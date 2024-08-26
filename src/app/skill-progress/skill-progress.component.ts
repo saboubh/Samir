@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core'; // Importer le service de traduction
 
 @Component({
   selector: 'app-skill-progress',
@@ -11,96 +12,87 @@ export class SkillProgressComponent implements OnInit {
     viewSkillBars: true,
     experience: [
       {
-        Stack: "Frontend/Design",
+        Stack: "skillProgress.frontendDesign",
         progressPercentage: "90%"
       },
       {
-        Stack: "Backend",
-        progressPercentage: "90%"
-      },
-   
-      {
-        Stack: "Database Management",
+        Stack: "skillProgress.backend",
         progressPercentage: "90%"
       },
       {
-        Stack: "System Architecture",
+        Stack: "skillProgress.databaseManagement",
         progressPercentage: "90%"
       },
       {
-        Stack: "API Development",
+        Stack: "skillProgress.systemArchitecture",
         progressPercentage: "90%"
       },
       {
-        Stack: "(CI/CD)",
+        Stack: "skillProgress.apiDevelopment",
         progressPercentage: "90%"
       },
       {
-        Stack: "Agile Methodologies",
+        Stack: "skillProgress.ciCd",
         progressPercentage: "90%"
       },
-   
       {
-        Stack: "Problem Solving",
+        Stack: "skillProgress.agileMethodologies",
         progressPercentage: "90%"
       },
-     
       {
-        Stack: "Mobile Development",
+        Stack: "skillProgress.problemSolving",
         progressPercentage: "90%"
       },
-      
+      {
+        Stack: "skillProgress.mobileDevelopment",
+        progressPercentage: "90%"
+      }
     ],
     experience2: [
       {
-        Stack: "Software Testing/QA",
+        Stack: "skillProgress.softwareTestingQa",
         progressPercentage: "90%"
       },
       {
-        Stack: "Programming",
+        Stack: "skillProgress.programming",
         progressPercentage: "90%"
       },
       {
-        Stack: "Writing Reports",
+        Stack: "skillProgress.writingReports",
         progressPercentage: "95%"
       },
-    
-     
-     
-    
       {
-        Stack: "Machine Learning/AI",
+        Stack: "skillProgress.machineLearningAi",
         progressPercentage: "70%"
       },
       {
-        Stack: "DevOps",
+        Stack: "skillProgress.devOps",
         progressPercentage: "80%"
       },
       {
-        Stack: "Data Analysis",
+        Stack: "skillProgress.dataAnalysis",
         progressPercentage: "80%"
       },
       {
-        Stack: "Cloud Computing",
+        Stack: "skillProgress.cloudComputing",
         progressPercentage: "75%"
       },
       {
-        Stack: "Cybersecurity",
+        Stack: "skillProgress.cybersecurity",
         progressPercentage: "70%"
       },
       {
-        Stack: "Embedded Systems",
+        Stack: "skillProgress.embeddedSystems",
         progressPercentage: "55%"
       },
       {
-        Stack: "Networking",
+        Stack: "skillProgress.networking",
         progressPercentage: "55%"
-      },
-     
+      }
     ]
   };
 
-  constructor() { }
+  constructor(private translate: TranslateService) { }
 
   ngOnInit(): void {
   }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core'; // Importer le service de traduction
 
 @Component({
   selector: 'app-contact',
@@ -7,14 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
   public contactInfo = {
-    title: "Contact Me :  ",
-    subtitle: "Want to collaborate on a project or just say hello? I'm all ears and my inbox is open!",
-    number: "+1 514 567 5658",
-    email_address: "samir.boussaadi24@gmail.com"
+    title: 'contact.title',
+    subtitle: 'contact.subtitle',
+    number: '+1 514 567 5658',  // Si ces champs doivent être traduits également, utilisez des clés de traduction
+    email_address: 'samir.boussaadi24@gmail.com'  // Sinon, gardez les champs directs comme ils le sont
   };
-  constructor() { }
+
+  constructor(private translate: TranslateService) { }
 
   ngOnInit(): void {
   }
-
 }

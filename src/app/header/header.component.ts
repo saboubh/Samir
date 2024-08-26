@@ -1,26 +1,13 @@
+// header.component.ts
 import { Component, OnInit } from '@angular/core';
-import {animate, group, query, state, style, transition, trigger} from "@angular/animations";
+import { LanguageService } from '../language.service';
+import { animate, group, query, state, style, transition, trigger } from "@angular/animations";
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   animations: [
-    // trigger('routerTransition', [
-    //   transition('* <=> *', [
-    //     query(':enter, :leave', style({ position: 'fixed', opacity: 1 })),
-    //     group([
-    //       query(':enter', [
-    //         style({ opacity:0 }),
-    //         animate('1000ms ease-in-out', style({ opacity:1 }))
-    //       ]),
-    //       query(':leave', [
-    //         style({ opacity:1 }),
-    //         animate('1000ms ease-in-out', style({ opacity:0 }))]),
-    //     ])
-    //   ])
-    // ])
-
     trigger('fadein', [
       state('in', style({
         opacity: 1,
@@ -43,16 +30,20 @@ import {animate, group, query, state, style, transition, trigger} from "@angular
   ]
 })
 export class HeaderComponent implements OnInit {
+  currentLangLabel: string;
 
-  constructor() { }
-  greeting= {
-    username: "Samir Boussaadi",
-    title: "Hi all, I'm Sarthak",
-    subTitle: "A passionate Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks.",
-    resumeLink: "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing"
-  }
+  constructor(private languageService: LanguageService) {}
 
   ngOnInit(): void {
+    this.updateLangLabel();
   }
 
+  toggleLanguage(): void {
+    this.languageService.toggleLanguage();
+    this.updateLangLabel();
+  }
+
+  updateLangLabel(): void {
+    this.currentLangLabel = this.languageService.getCurrentLanguage() === 'en' ? 'FR' : 'EN';
+  }
 }

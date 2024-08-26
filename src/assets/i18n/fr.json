@@ -1,0 +1,234 @@
+{
+  "ABOUT": "À propos",
+  "SKILLS": "Compétences",
+  "EDUCATION": "Éducation",
+  "PROJECTS": "Projets",
+  "EXPERIENCES": "Expériences",
+  "CONTACT": "Contactez-moi",
+  
+  "greeting": {
+    "title": "Bonjour à tous, je suis Samir",
+    "subTitle": "Je suis un développeur junior dédié avec une solide base en génie logiciel et une expérience pratique en développement full-stack. Je cherche activement une opportunité pour appliquer mes compétences et élargir mes connaissances dans un environnement dynamique et innovant. Ma curiosité innée et ma capacité d'adaptation me permettent de relever une large gamme de défis techniques, que ce soit en développement front-end ou back-end. Je suis particulièrement attiré par les projets qui encouragent l'apprentissage continu et favorisent une culture de travail collaborative. Je suis impatient de contribuer de manière significative à une équipe avant-gardiste et dévouée. Si vous cherchez un développeur passionné prêt à avoir un impact positif, j'aimerais beaucoup échanger :)"
+  },
+  "buttons": {
+    "contact": "Me contacter",
+    "resume": "Voir mon CV"
+  },
+  
+  "skillsSection": {
+    "title": "Mon Expertise",
+    "subTitle": "Développeur Full Stack passionné, désireux d'explorer et de maîtriser divers ensembles de technologies pour créer des solutions innovantes.",
+    "skills": [
+      "✨ Développer des interfaces utilisateur interactives pour les applications web et mobiles avec Angular, React et Flutter",
+      "✨ Créer des backends d'application robustes avec Node.js, Express et Spring Boot",
+      "✨ Concevoir et implémenter des Progressive Web Applications (PWA) dans des piles standard et SPA",
+      "✨ Intégrer des services tiers tels que Firebase et AWS pour des fonctionnalités d'application améliorées",
+      "✨ Optimiser les performances des applications et assurer un déploiement fluide dans les environnements de production",
+      "✨ Collaborer avec les équipes de conception pour intégrer de nouveaux designs et améliorer l'expérience utilisateur",
+      "✨ Effectuer des tests unitaires et serveur pour garantir la fiabilité de l'application",
+      "✨ Développer des systèmes d'authentification et d'autorisation sécurisés",
+      "✨ Rédiger et exécuter des requêtes SQL complexes pour la gestion et la récupération des données",
+      "✨ Participer à des revues de code et des sessions de brainstorming pour encourager l'amélioration continue et l'innovation",
+      "✨ Gérer la communication en temps réel en utilisant les protocoles WebSocket pour les applications interactives",
+      "✨ Utiliser des pratiques DevOps pour l'intégration et le déploiement continus (CI/CD)"
+    ]
+  },
+  
+  "timeline": {
+    "title": "Éducation",
+    "infosys": {
+      "heading": "Infosys",
+      "duration": "actuel",
+      "content": "Développeur Full stack prochainement chez Infosys!"
+    },
+    "btech": {
+      "heading": "B.Tech",
+      "duration": "2016 - 2020",
+      "content": "J'ai réussi mon B.Tech en informatique à l'Université GLA, Mathura."
+    },
+    "intermediate": {
+      "heading": "Intermédiaire",
+      "duration": "2015-2016",
+      "content": "J'ai réussi mes études intermédiaires en 2016 à l'école publique secondaire Gyan Deep Sr., Shikohabad. Spécialisation : PCM."
+    },
+    "highSchool": {
+      "heading": "Lycée",
+      "duration": "2013-2014",
+      "content": "J'ai terminé mes études secondaires avec succès en 2014 à la Georgions Academy, Shikohabad."
+    }
+  },
+  
+  "education": {
+    "title": "Éducation 💻",
+    "bachelorSoftwareEngineering": {
+      "heading": "B.Eng Baccalauréat en Génie Logiciel",
+      "duration": "2023",
+      "subtitle": "Polytechnique Montréal -Université Technologique (QC) -",
+      "content": "Réussi avec succès"
+    },
+    "specializedGraduateDiploma": {
+      "heading": "Diplôme d'études supérieures spécialisées en Génie Industriel",
+      "duration": "2014",
+      "subtitle": "Université Laval (QC)",
+      "content": "Réussi avec succès."
+    },
+    "bachelorChemicalEngineering": {
+      "heading": "B.Eng Baccalauréat en Génie Chimique",
+      "duration": "2007",
+      "subtitle": "Université Larbi Ben M’Hidi -Algérie-",
+      "content": "Réussi avec succès"
+    }
+  },
+    "skillProgress": {
+      "proficiency": "Compétence",
+      "frontendDesign": "Frontend/Design",
+      "backend": "Backend",
+      "databaseManagement": "Gestion des bases de données",
+      "systemArchitecture": "Architecture système",
+      "apiDevelopment": "Développement d'API",
+      "ciCd": "(CI/CD)",
+      "agileMethodologies": "Méthodologies agiles",
+      "problemSolving": "Résolution de problèmes",
+      "mobileDevelopment": "Développement mobile",
+      "softwareTestingQa": "Test logiciel/QA",
+      "programming": "Programmation",
+      "writingReports": "Rédaction de rapports",
+      "machineLearningAi": "Apprentissage automatique/IA",
+      "devOps": "DevOps",
+      "dataAnalysis": "Analyse de données",
+      "cloudComputing": "Informatique en nuage",
+      "cybersecurity": "Cybersécurité",
+      "embeddedSystems": "Systèmes embarqués",
+      "networking": "Réseautique"
+    },
+    
+     "experience": {
+    "title": "Expériences",
+    "seeMore": "Voir plus",
+    "details": "Détails de l'expérience",
+    "close": "Fermer",
+    
+    "fullStackDeveloper": {
+      "role": "Développeur Full Stack",
+      "company": "Comparastore",
+      "date": "Juin 2023 – Déc 2023",
+      "desc1": "✨ Collaboration avec l'équipe pour comprendre les exigences spécifiques de la version 2.0 du tableau de bord Comparastore.",
+      "desc2": "✨ Évaluation des fonctionnalités existantes et identification des améliorations nécessaires.",
+      "desc3": "✨ Mise en place du backend du tableau de bord en utilisant Next.js.",
+      "desc4": "✨ Création d'API robustes pour prendre en charge les fonctionnalités de l'application et assurer des performances optimales.",
+      "desc5": "✨ Intégration des fonctionnalités et des interfaces utilisateur dans le tableau de bord en utilisant Next.js.",
+      "desc6": "✨ Participation au processus de déploiement de l'application en production.",
+      "bullet1": {
+        "title": "Filtre, réservation et chat",
+        "description": "Un administrateur d'entrepôt peut consulter toutes les réservations et les filtrer en fonction de divers critères, tels que le nom du client, le numéro de réservation et d'autres détails pertinents. De plus, l'administrateur peut mettre à jour ou ajouter des informations complètes à chaque réservation et accéder à l'historique complet des interactions entre le client et l'entrepôt."
+      },
+      "bullet2": {
+        "title": "Analytique",
+        "description": "Un administrateur peut consulter toutes les analyses détaillées de chaque entrepôt et les comparer en les sélectionnant dans une liste. Ces informations sont disponibles sur quatre pages différentes : Résumé, Acquisition, Conversion et Satisfaction."
+      }
+    },
+
+    "programmerAnalyst": {
+      "role": "Analyste Programmeur",
+      "company": "OpenBook",
+      "date": "Février 2019 – Janvier 2021",
+      "desc1": "✨ Création de l'interface utilisateur en utilisant Angular, assurant la réactivité et la convivialité.",
+      "desc2": "✨ Conception de la structure de la base de données Firebase selon les exigences de l'application.",
+      "desc3": "✨ Configuration et développement du serveur backend avec Node.js.",
+      "desc4": "✨ Mise en œuvre de fonctionnalités permettant aux utilisateurs de publier des annonces avec détails, images et disponibilité.",
+      "desc5": "✨ Mise en place d'un système d'authentification et d'autorisation sécurisé avec Firebase.",
+      "desc6": "✨ Réalisation de tests unitaires et serveurs.",
+      "desc7": "✨ Déploiement de l'application en production."
+    },
+
+ "softwareEngineer": {
+  "role": "Ingénieur Logiciel",
+  "company": "Poly Technique",
+  "date": "Le Véhicule Controlé par Android",
+  "desc1": "✨ Mise en œuvre des fonctionnalités côté serveur en C pour répondre aux demandes de l'application Android (Kotlin).",
+  "desc2": "✨ Développement des fonctionnalités côté application en Kotlin pour interagir avec le serveur.",
+  "desc3": "✨ Envoi de requêtes via Socket depuis l'application Kotlin.",
+  "desc4": "✨ Traitement approprié des réponses côté application.",
+  "bullet1": {
+    "title": "SMOL : Le Véhicule Autonome Controlé par Android",
+    "description": "SMOL est notre véhicule autonome sur mesure, contrôlé de manière transparente via notre application Android. Conçu pour l'efficacité et la précision, SMOL est un exemple de pointe de la mobilité intelligente en action."
+  },
+  "photoList1": {
+    "title": "Application SMOL",
+    "description": "Application SMOL"
+  },
+  "photoList2": {
+    "title": "Équipe SMOL",
+    "description": "L'équipe SMOL avec le professeur"
+  }
+}
+,
+
+    
+    
+
+    "scrabbleDeveloper": {
+      "role": "Développeur Full Stack",
+      "company": "Poly Technical",
+      "date": "Jeu de Scrabble Multijoueur",
+      "desc1": "✨ Conception et développement d'une application de jeu multijoueur avec fonctionnalités de chat en temps réel.",
+      "desc2": "✨ Développement de la version mobile avec Flutter (Dart).",
+      "desc3": "✨ Développement de la version web avec Angular.",
+      "desc4": "✨ Utilisation de MongoDB pour le stockage et la gestion des données.",
+      "desc5": "✨ Mise en place d'un serveur avec Node.js.",
+      "desc6": "✨ Implémentation d'un système d'authentification des utilisateurs.",
+      "desc7": "✨ Sauvegarde des données de chat et maintien de l'historique des discussions.",
+      "desc8": "✨ Rédaction des documents de spécifications des exigences logicielles (SRS).",
+      "desc9": "✨ Création de plans de développement logiciel.",
+      "desc10": "✨ Préparation des rapports de test.",
+      "desc11": "✨ Conception des plans architecturaux.",
+      "bullet1": {
+        "title": "application Web",
+        "description": ""
+      },
+      "bullet2": {
+        "title": "application Android",
+        "description": ""
+      }
+    },
+
+    "secondYearProject": {
+      "role": "Développeur Full Stack",
+      "company": "Poly Technical",
+      "date": "Projet de Deuxième Année",
+      "desc1": "✨ Développement de la première version d'un jeu de Scrabble pour deux joueurs.",
+      "desc2": "✨ Utilisation d'Angular avec TypeScript pour le développement frontend.",
+      "desc3": "✨ Mise en place d'un serveur avec Node.js.",
+      "desc4": "✨ Pas d'intégration de base de données, donc pas de fonctionnalités d'historique ou d'authentification.",
+      "desc5": "✨ Focalisation sur le jeu en temps réel entre deux joueurs."
+    },
+
+    "firstYearProject": {
+      "role": "Développeur Full Stack",
+      "company": "Poly Technical",
+      "date": "Projet de Première Année",
+      "desc1": "✨ Programmation d'un robot autonome en C.",
+      "desc2": "✨ Permettre au robot d'éviter les obstacles.",
+      "desc3": "✨ Mise en œuvre de fonctionnalités pour envoyer des alertes."
+    }
+  }
+,
+  
+
+  "contact": {
+    "title": "Contactez-moi :",
+    "subtitle": "Vous souhaitez collaborer sur un projet ou simplement dire bonjour ? Je suis à  l'ecoute,ma boîte de réception est ouverte !",
+    "number": "+1 514 567 5658", 
+    "email_address": "samir.boussaadi24@gmail.com"  
+  }, 
+  "footer": {
+    "text": "© 2024, Fait avec ❤️ par Samir Boussaadi"
+  }
+  
+
+  
+  
+}
+  
+  
+

@@ -1,14 +1,15 @@
 .contact-div-main {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Aligner les éléments verticalement */
+  text-align: center; /* Assurer que le texte est centré */
+  margin: auto; /* Centrer le conteneur lui-même */
+  width: 100%; /* Assurer que le conteneur prend toute la largeur disponible */
 }
 
 .subTitle {
   color: rgb(134, 142, 150);
-}
-
-
-.contact-div-main > * {
-  flex: 1;
 }
 
 .contact-title {
@@ -57,11 +58,6 @@
   .contact-title {
     font-size: 56px;
     font-weight: 400;
-    text-align: center;
-  }
-
-  .contact-title {
-    font-size: 40px;
     text-align: center;
   }
 

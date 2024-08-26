@@ -1,32 +1,25 @@
-
 <div class="greet-main" id="greeting">
-  <div class="greeting-main"  wmAnimate="fadeInUp" aos speed="normal">
+  <div class="greeting-main" wmAnimate="fadeInUp" aos speed="normal">
     <div class="greeting-text-div">
       <div>
         <h1 class="greeting-text">
-          {{greeting.title}}
-          <span class="wave-emoji">👋</span>
+          {{ 'greeting.title' | translate }}
         </h1>
-        <p class="greeting-text-p subTitle">{{greeting.subTitle}}</p>
-            <app-social-media></app-social-media>
+        <p class="greeting-text-p subTitle">{{ 'greeting.subTitle' | translate }}</p>
+        <br>
+        <app-social-media></app-social-media>
         <div class="button-greeting-div">
-<!--        button-->
           <div>
-            <a class="main-button" href="#contact">Contact me</a>
+            <a class="main-button" href="#contact">{{ 'buttons.contact' | translate }}</a>
           </div>
           <div>
-            <a class="main-button" href={{greeting.resumeLink}}>See my resume</a>
+            <a class="main-button" [href]="getResumeLink()" target="_blank">
+              {{ 'buttons.resume' | translate }}
+            </a>
           </div>
-<!--          <Button text="Contact me" href="#contact" />-->
-<!--          <Button text="See my resume" newTab={true} href={greeting.resumeLink} />-->
+          <br><br><br>
         </div>
       </div>
-    </div>
-    <div class="greeting-image-div">
-      <!-- <img src="../../assets/images/manOnTable.svg" alt="Sarthak sitting on table"> -->
-      <img src="../../assets/images/grade.JPG" alt="Grade_Poly">
-
-
     </div>
   </div>
 </div>

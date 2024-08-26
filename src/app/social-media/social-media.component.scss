@@ -1,28 +1,30 @@
 .social-media-div {
-  font-size: 2em;
+  display: flex;            /* Utilise Flexbox pour la mise en page */
+  justify-content: center;  /* Centre le contenu horizontalement */
+  align-items: center;      /* Centre le contenu verticalement si nécessaire */
+  flex-wrap: wrap;          /* Permet de retourner à la ligne si l'espace est limité */
+  text-align: center;       /* Centrer le texte à l'intérieur */
+  margin: 20px auto;        /* Centrer la div elle-même et ajouter un peu d'espace autour */
 }
 
 .icon-button {
-  margin-bottom: 10px;
+  margin: 0 10px;           /* Ajoute de l'espace entre les icônes */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ajoute une transition pour l'effet hover */
+  text-decoration: none;    /* Enlève la décoration de texte par défaut */
 }
 
 .icon-button i {
   color: white;
-  border-radius: 2.6rem;
+  border-radius: 50%;       /* Rendre les icônes circulaires */
   cursor: pointer;
   display: inline-block;
   font-size: 1.3rem;
   height: 2.6rem;
   line-height: 2.6rem;
-  margin: 0 5px;
-  position: relative;
   text-align: center;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   width: 2.6rem;
-  margin-bottom: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajoute une ombre pour la profondeur */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Ajoute des transitions pour l'arrière-plan et le zoom */
 }
 
 .facebook i {
@@ -37,37 +39,29 @@
   background-color: #333;
 }
 
-.gitlab i {
-  background-color: #fca326;
-}
-
 .google i {
   background-color: #ea4335;
-}
-
-.twitter i {
-  background-color: #1da1f2;
 }
 
 .instagram i {
   background-color: #c13584;
 }
 
-/* Hover Transition */
-.twitter i:hover,
-.google i:hover,
-.gitlab i:hover,
-.github i:hover,
-.linkedin i:hover,
-.facebook i:hover,
-.instagram i:hover {
-  background-color: black;
-  transition: 0.3s ease-in;
+/* Effet Hover avec Transition */
+.icon-button:hover i {
+  transform: scale(1.1); /* Légèrement agrandir l'icône */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Augmenter l'ombre au survol */
 }
 
-/* Media Query */
+.icon-button i:hover {
+  background-color: #555; /* Change la couleur de fond au survol */
+}
+
+/* Media Query pour Petits Écrans */
 @media (max-width: 768px) {
   .social-media-div {
-    text-align: center;
+    justify-content: center; /* Centre le contenu sur les petits écrans */
+    flex-direction: column;  /* Change l'orientation en colonne sur les petits écrans */
+    gap: 10px;               /* Ajoute de l'espace entre les icônes */
   }
 }

@@ -1,44 +1,26 @@
-<!--<p>education works!</p>-->
-<div class="prt_about_edulearn_wrapper" id="education" >
+<div class="prt_about_edulearn_wrapper" id="education">
   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
     <div class="prt_heading_wrapper">
       <div class="prt_heading">
-        test 
-        <h1 class="timeline-heading">Education 💻</h1>
+        <h1 class="timeline-heading">{{ 'education.title' | translate }}</h1>
       </div>
     </div>
     
-    <div class="prt_about_learnsection" >
-      <div *ngFor="let i of timeline"wmAnimate="landing" aos speed="normal">
-         <div [class]=i.className1>
-          <div [class]=i.className2>
+    <div class="prt_about_learnsection">
+      <div *ngFor="let i of timeline" wmAnimate="landing" aos speed="normal">
+        <div [ngClass]="i.className1">
+          <div [ngClass]="i.className2">
             <div class="prt_about_learnbox_year">
-              <h1>{{i.duration}}</h1>
+              <h1>{{ i.duration | translate }}</h1>
             </div>
             <div class="prt_about_learnbox_info">
-              <h4>{{i.heading}}</h4>
-              <span>{{i.subtitle}}</span>
-              <p>{{i.content}}</p>
+              <h4>{{ i.heading | translate }}</h4>
+              <span>{{ i.subtitle | translate }}</span>
+              <p>{{ i.content | translate }}</p>
             </div>
           </div>
-        </div> 
-
-
-
-
-
-     
-
-
-      
-
-
-
-
-
+        </div>
       </div>
     </div>
   </div>
 </div>
-
-

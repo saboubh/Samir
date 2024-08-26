@@ -1,16 +1,12 @@
 <div class="skills-container" *ngIf="techStack.viewSkillBars" wmAnimate="fadeInUp" aos speed="normal">
-
   <h1 class="skills-heading">
-    Proficiency  <i class="fas fa-cogs"></i>
+    {{ 'skillProgress.proficiency' | translate }} <i class="fas fa-cogs"></i>
   </h1>
-  
-
-  
   
   <div class="skills-content">
     <div class="skills-bar">
       <div class="skill" *ngFor="let exp of techStack.experience">
-        <p>{{exp.Stack}}</p>
+        <p>{{ exp.Stack | translate }}</p>
         <div class="meter">
           <span [ngStyle]="{'width': exp.progressPercentage, 'background-color': getProgressColor(exp.progressPercentage)}"></span>
         </div>
@@ -19,7 +15,7 @@
 
     <div class="skills-bar">
       <div class="skill" *ngFor="let exp of techStack.experience2">
-        <p>{{exp.Stack}}</p>
+        <p>{{ exp.Stack | translate }}</p>
         <div class="meter">
           <span [ngStyle]="{'width': exp.progressPercentage, 'background-color': getProgressColor(exp.progressPercentage)}"></span>
         </div>

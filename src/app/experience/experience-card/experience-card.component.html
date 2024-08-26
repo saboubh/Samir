@@ -1,65 +1,52 @@
 <div class="experience-card" wmAnimate="bumpIn" aos speed="normal">
-
   <div [ngStyle]="{background: experience.color}" class="experience-banner">
     <div class="experience-blurred_div"></div>
     <div class="experience-div-company" title="Click to visit the company's site">
       <a [href]="experience.companyUrl" target="_blank" rel="noopener noreferrer">
-        <img crossOrigin="anonymous" class="experience-div-company" [src]="experience.companylogo" alt="{{experience.company}}">
+        <img crossOrigin="anonymous" class="experience-div-company" [src]="experience.companylogo" alt="{{experience.company | translate}}">
       </a>
     </div>
   </div>
 
-  <h5 class="experience-text-role">{{experience.role}}</h5>
-  <h5 class="experience-text-date">{{experience.date}}</h5>
+  <h5 class="experience-text-role">{{ experience.role | translate }}</h5>
+  <h5 class="experience-text-date">{{ experience.date | translate }}</h5>
 
-  <!-- The "Voir plus" button -->
   <button class="toggle-button" (click)="openModal()">
-    Voir plus
+    {{ 'experience.seeMore' | translate }}
   </button>
 
-  <!-- Modal for showing more details -->
   <div class="modal" [ngClass]="{'is-active': isModalActive}">
     <div class="modal-background" (click)="closeModal()"></div>
 
- <div class="modal-content">
-  <div class="box">
-    <h1 class="modal-title">Experience Details :</h1>
+    <div class="modal-content">
+      <div class="box">
+        <h1 class="modal-title">{{ 'experience.details' | translate }}</h1>
 
-    <div *ngFor="let list of experience.desc">
-      <p>{{list}}</p>
-    </div>
+        <div *ngFor="let list of experience.desc">
+          <p>{{ list | translate }}</p>
+        </div>
 
-    <!-- Modifier ici : Utiliser une seule div.video-container pour toutes les vidéos -->
-    <div class="video-container">
-      <div *ngFor="let video of experience.descBullets">
-        <h3 class="video-title">{{video.title}}</h3>
-        <!-- <pre>{{ video | json }}</pre> -->
+        <div class="video-container">
+          <div *ngFor="let video of experience.descBullets">
+            <h3 class="video-title">{{ video.title | translate }}</h3>
+            <iframe width="350" height="220" [src]="getSafeUrl(video.url)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <p class="video-description">{{ video.description | translate }}</p>
+          </div>
+          <div *ngFor="let photo of experience.photoList">
+            <h3 class="photo-title">{{ photo.title | translate }}</h3>
+            <a [href]="photo.filename" target="_blank" rel="noopener noreferrer">
+              <img [src]="photo.filename" alt="{{ photo.title }}" width="350" height="220" />
+            </a>
+            <p class="photo-description">{{ photo.description | translate }}</p>
+          </div>
+        </div>
 
-        <iframe 
-          width="350" 
-          height="220" 
-          [src]="getSafeUrl(video.url)" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen>
-        </iframe>
-        <p class="video-description">{{video.description}}</p>
-
+        <button class="modal-close-button" (click)="closeModal()">
+          {{ 'experience.close' | translate }}
+        </button>
       </div>
     </div>
 
-    
-
-    <!-- Close Button Inside the Modal -->
-    <button class="modal-close-button" (click)="closeModal()">
-      Close
-    </button>
-  </div>
-</div>
-
-
-
     <button class="modal-close is-large" aria-label="close" (click)="closeModal()"></button>
   </div>
-
 </div>

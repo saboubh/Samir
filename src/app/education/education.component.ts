@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';  // Importer le service de traduction
 
 @Component({
   selector: 'app-education',
@@ -7,46 +8,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EducationComponent implements OnInit {
   timeline = [
-    // {
-    //   heading: "Infosys",
-    //   duration: "Present",
-    //   subtitle: "",
-    //   content: "Upcoming Full stack develover at Infosys!",
-    //   className1: "mar-left",
-    //   className2: "prt_about_learnbox_right"
-    // },
     {
-      heading: "B.Eng Bachelor of Software Engineering",
-      duration: "2023",
-      subtitle: "Polytechnique Montreal -Technological University (QC) -",
-      content: "Successfully completed",
+      heading: "education.bachelorSoftwareEngineering.heading",
+      duration: "education.bachelorSoftwareEngineering.duration",
+      subtitle: "education.bachelorSoftwareEngineering.subtitle",
+      content: "education.bachelorSoftwareEngineering.content",
       className1: "mar-right",
       className2: "prt_about_learnbox_left"
     },
-
-
     {
-      heading: "Specialized Graduate Diploma in Industrial Engineering",
-      duration: "2014",
-      subtitle: "Laval University (QC)",
-      content: "Successfully completed.",
+      heading: "education.specializedGraduateDiploma.heading",
+      duration: "education.specializedGraduateDiploma.duration",
+      subtitle: "education.specializedGraduateDiploma.subtitle",
+      content: "education.specializedGraduateDiploma.content",
       className1: "mar-left",
       className2: "prt_about_learnbox_right"
     },
-
     {
-      heading: "B.Eng Bachelor of chemical engineering",
-      duration: "2007",
-      subtitle: "Larbi Ben M’Hidi University -Algeria-",
-      content: "Successfully completed",
+      heading: "education.bachelorChemicalEngineering.heading",
+      duration: "education.bachelorChemicalEngineering.duration",
+      subtitle: "education.bachelorChemicalEngineering.subtitle",
+      content: "education.bachelorChemicalEngineering.content",
       className1: "mar-right",
       className2: "prt_about_learnbox_left"
-    },
-    ];
+    }
+  ];
 
-  constructor() { }
+  constructor(private translate: TranslateService) { }
 
   ngOnInit(): void {
+    // Initialisation, si nécessaire
   }
-
 }

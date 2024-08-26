@@ -1,159 +1,100 @@
-/* header */
-p {
-  display: block;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-}
-
 .header {
+  position: fixed; /* Fixe le header en haut de la page */
+  top: 0;          /* Positionne le header tout en haut */
+  left: 0;         /* Positionne le header tout à gauche */
+  right: 0;        /* Étend le header jusqu'à la droite */
   max-width: 90%;
   padding: 20px 10px;
-  margin: 0px auto;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Espace entre le logo et le menu */
+  background-color: #fff; /* Assure que le header a un fond */
+  z-index: 1000;    /* Assure que le header reste au-dessus des autres éléments */
 }
 
-.header ul {
-  margin: 0;
-  padding: 0;
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: 20px; /* Espacement entre la photo et la liste */
+}
+
+.greeting-image-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;  /* Largeur réduite de la div contenant l'image */
+  height: 80px; /* Hauteur réduite de la div contenant l'image */
+  overflow: hidden;
+  border-radius: 50%; /* Rendre la div circulaire */
+  margin-right: 1px; /* Ajouter un peu d'espace à droite de l'image */
+}
+
+.greeting-image-div img {
+  width: 100%;  /* L'image occupe toute la largeur de la div */
+  height: auto;
+  border-radius: 50%; /* L'image est circulaire */
+  object-fit: cover; /* Assure que l'image couvre toute la div sans déformation */
+}
+
+.menu {
+  flex-grow: 1;  /* Permet à la liste de prendre tout l'espace restant */
+  display: flex;
+  justify-content: space-between; /* Répartir les éléments de manière égale */
   list-style: none;
+  margin: 0;
   overflow: hidden;
   background-color: #fff;
-}
-.grey-color {
-  color: #868e96;
+  border: 2px solid #007bff; /* Définir une bordure autour de la liste */
+  border-radius: 50px; /* Arrondir fortement les coins pour un effet elliptique */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajouter une ombre pour un effet de profondeur */
 }
 
-.header li a {
+
+
+.menu li {
+  display: inline-block;
+}
+
+.menu li a {
   display: block;
-  padding: 20px 20px;
+  padding: 15px 15px;
   font-weight: 400;
   color: black;
   text-decoration: none;
 }
 
-.header li a:hover,
+.menu li a:hover,
 .header .menu-btn:hover {
   background-color: #f4f4f4;
 }
 
-.header .logo {
-  display: block;
-  float: left;
-  font-size: 1.5em;
-  text-decoration: none;
-  margin-top: 10px;
-  line-height: normal;
-}
-.header .logo-name {
-  font-family: "Agustina Regular";
-  font-weight: bold;
-  font-variant-ligatures: no-common-ligatures;
-  -webkit-font-variant-ligatures: no-common-ligatures;
-  padding: 0 10px;
-  color:  #55198b;
-
-  &:hover{
-    color: red;
-  }
-}
-
-/* menu */
-
-.header .menu {
-  clear: both;
-  max-height: 0;
-  transition: max-height 0.2s ease-out;
-}
-
-/* menu icon */
-
-.header .menu-icon {
-  cursor: pointer;
-  display: inline-block;
-  float: right;
-  padding: 28px 20px;
-  position: relative;
-  user-select: none;
-}
-
-.header .menu-icon .navicon {
-  background: #333;
-  display: block;
-  height: 2px;
-  position: relative;
-  transition: background 0.2s ease-out;
-  width: 18px;
-}
-
-.header .menu-icon .navicon:before,
-.header .menu-icon .navicon:after {
-  background: #333;
-  content: "";
-  display: block;
-  height: 100%;
-  position: absolute;
-  transition: all 0.2s ease-out;
-  width: 100%;
-}
-
-.header .menu-icon .navicon:before {
-  top: 5px;
-}
-
-.header .menu-icon .navicon:after {
-  top: -5px;
-}
-
-/* menu btn */
-
-.header .menu-btn {
-  display: none;
-}
-
-.header .menu-btn:checked ~ .menu {
-  max-height: 370px;
-}
-
-.header .menu-btn:checked ~ .menu-icon .navicon {
+button {
+  margin: 10px;
   background: transparent;
+  border: 2px solid #007bff;
+  border-radius: 50%;
+  padding: 5px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon::before {
-  transform: rotate(-45deg);
+button:hover {
+  transform: scale(1.1);
+  border-color: #0056b3;
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon::after {
-  transform: rotate(45deg);
+button:focus {
+  outline: none;
+  border-color: #0056b3;
 }
 
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
-  top: 0;
-}
-.subtitle{
-  color: red;
-}
-/* 48em = 768px */
-
-@media (min-width: 48em) {
-  .header li {
-    float: left;
-  }
-  .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .header .menu {
-    max-height: none;
-  }
-  .header .menu-icon {
-    display: none;
-  }
-}
-@media (max-width: 960px) and (min-width: 768px) {
-  .header {
-    font-size: 12px;
-  }
+button:active {
+  transform: scale(0.9);
 }
