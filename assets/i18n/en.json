@@ -142,8 +142,8 @@
         "desc6": "✨ Conducted unit and server testing.",
         "desc7": "✨ Deployed the application to production.",
         "photoList": [
-          { "title": "OpenBook", "filename": "../../../assets/images/ob1.png", "description": "Musician Dashboard" },
-          { "title": "OpenBook", "filename": "../../../assets/images/ob2.jpg", "description": "Chat" }
+          { "title": "OpenBook", "filename": "assets//assets/images/ob1.png", "description": "Musician Dashboard" },
+          { "title": "OpenBook", "filename": "assets//assets/images/ob2.jpg", "description": "Chat" }
         ]
       },
   
