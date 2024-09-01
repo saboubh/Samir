@@ -10,8 +10,7 @@
   
   "greeting": {
     "title": "Bonjour à tous, je suis Samir",
-    "subTitle": "Je suis un développeur junior dédié avec une solide base en génie logiciel et une expérience pratique en développement full-stack. Je cherche activement une opportunité pour appliquer mes compétences et élargir mes connaissances dans un environnement dynamique et innovant. Ma curiosité innée et ma capacité d'adaptation me permettent de relever une large gamme de défis techniques, que ce soit en développement front-end ou back-end. Je suis particulièrement attiré par les projets qui encouragent l'apprentissage continu et favorisent une culture de travail collaborative. Je suis impatient de contribuer de manière significative à une équipe avant-gardiste et dévouée. Si vous cherchez un développeur passionné prêt à avoir un impact positif, j'aimerais beaucoup échanger :)"
-  },
+    "subTitle": "Je suis un analyste programmeur dédié avec une solide base en génie logiciel et une expérience pratique en analyse et développement de solutions logicielles. Je cherche activement une opportunité pour appliquer mes compétences analytiques et techniques dans un environnement dynamique et innovant. Ma curiosité innée et mes capacités de résolution de problèmes me permettent de relever une large gamme de défis, qu'ils soient d'ordre technique ou analytique. Je suis particulièrement attiré par les projets qui impliquent l'analyse de données, l'optimisation des systèmes, et qui encouragent l'apprentissage continu. J'apprécie de travailler dans des environnements de travail collaboratifs et je suis impatient de contribuer de manière significative à une équipe dévouée et tournée vers l'avenir. Si vous cherchez un analyste programmeur passionné, prêt à apporter des solutions de haute qualité et à avoir un impact positif, j'aimerais beaucoup échanger :)" },
   "buttons": {
     "contact": "Me contacter",
     "resume": "Voir mon CV"
@@ -81,6 +80,8 @@
       "content": "Réussi avec succès"
     }
   },
+  
+  
     "skillProgress": {
       "proficiency": "Compétence",
       "frontendDesign": "Frontend/Design",
@@ -88,7 +89,7 @@
       "databaseManagement": "Gestion des bases de données",
       "systemArchitecture": "Architecture système",
       "apiDevelopment": "Développement d'API",
-      "ciCd": "(CI/CD)",
+      "ciCd": "CI/CD",
       "agileMethodologies": "Méthodologies agiles",
       "problemSolving": "Résolution de problèmes",
       "mobileDevelopment": "Développement mobile",
@@ -101,8 +102,19 @@
       "cloudComputing": "Informatique en nuage",
       "cybersecurity": "Cybersécurité",
       "embeddedSystems": "Systèmes embarqués",
-      "networking": "Réseautique"
+      "networking": "Réseautique",
+      "requirementsAnalysis": "Analyse des exigences",
+      "dataModeling": "Modélisation des données",
+      "technicalDocumentation": "Documentation technique",
+      "systemOptimization": "Optimisation des systèmes",
+      "businessProcessModeling": "Modélisation des processus métier",
+      "dataVisualization": "Visualisation des données",
+      "projectManagement": "Gestion de projet"
     },
+  
+  
+  
+  
     
      "experience": {
     "title": "Expériences",
@@ -170,7 +182,7 @@
     
 
     "scrabbleDeveloper": {
-      "role": "Développeur Full Stack",
+      "role": "Analyste Programmeur",
       "company": "Poly Technical",
       "date": "Jeu de Scrabble Multijoueur",
       "desc1": "✨ Conception et développement d'une application de jeu multijoueur avec fonctionnalités de chat en temps réel.",
@@ -195,7 +207,7 @@
     },
 
     "secondYearProject": {
-      "role": "Développeur Full Stack",
+      "role": "Analyste Programmeur",
       "company": "Poly Technical",
       "date": "Projet de Deuxième Année",
       "desc1": "✨ Développement de la première version d'un jeu de Scrabble pour deux joueurs.",

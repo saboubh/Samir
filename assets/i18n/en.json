@@ -10,7 +10,8 @@
   
   "greeting": {
     "title": "Hello everyone, I'm Samir",
-    "subTitle": "I am a dedicated junior developer with a robust foundation in software engineering and practical experience in full-stack development. I am actively seeking an opportunity to apply my skills and expand my knowledge in a dynamic and innovative environment. My innate curiosity and adaptability equip me to address a wide range of technical challenges, whether in front-end or back-end development. I am particularly drawn to projects that encourage continuous learning and foster a collaborative work culture. I am eager to contribute meaningfully to a forward-thinking and dedicated team. If you're looking for a passionate developer committed to making a positive impact, I would love to connect :)"
+    "subTitle": "I am a dedicated analyst programmer with a solid foundation in software engineering and practical experience in analyzing and developing software solutions. I am actively seeking an opportunity to apply my analytical skills and technical knowledge in a dynamic and innovative environment. My innate curiosity and problem-solving abilities equip me to tackle a wide range of technical and analytical challenges. I am particularly drawn to projects that involve data analysis, system optimization, and encourage continuous learning. I thrive in collaborative work cultures and am eager to contribute meaningfully to a forward-thinking and dedicated team. If you're looking for a passionate analyst programmer committed to delivering high-quality solutions and making a positive impact, I would love to connect :)"
+
   },
   "buttons": {
     "contact": "Contact me",
@@ -81,30 +82,35 @@
       "content": "Successfully completed"
     }
   },
-    "skillProgress": {
-      "proficiency": "Proficiency",
-      "frontendDesign": "Frontend/Design",
-      "backend": "Backend",
-      "databaseManagement": "Database Management",
-      "systemArchitecture": "System Architecture",
-      "apiDevelopment": "API Development",
-      "ciCd": "(CI/CD)",
-      "agileMethodologies": "Agile Methodologies",
-      "problemSolving": "Problem Solving",
-      "mobileDevelopment": "Mobile Development",
-      "softwareTestingQa": "Software Testing/QA",
-      "programming": "Programming",
-      "writingReports": "Writing Reports",
-      "machineLearningAi": "Machine Learning/AI",
-      "devOps": "DevOps",
-      "dataAnalysis": "Data Analysis",
-      "cloudComputing": "Cloud Computing",
-      "cybersecurity": "Cybersecurity",
-      "embeddedSystems": "Embedded Systems",
-      "networking": "Networking"
-    
+  "skillProgress": {
+    "proficiency": "Proficiency",
+    "frontendDesign": "Frontend/Design",
+    "backend": "Backend",
+    "databaseManagement": "Database Management",
+    "systemArchitecture": "System Architecture",
+    "apiDevelopment": "API Development",
+    "ciCd": "CI/CD",
+    "agileMethodologies": "Agile Methodologies",
+    "problemSolving": "Problem Solving",
+    "mobileDevelopment": "Mobile Development",
+    "softwareTestingQa": "Software Testing/QA",
+    "programming": "Programming",
+    "writingReports": "Writing Reports",
+    "machineLearningAi": "Machine Learning/AI",
+    "devOps": "DevOps",
+    "dataAnalysis": "Data Analysis",
+    "cloudComputing": "Cloud Computing",
+    "cybersecurity": "Cybersecurity",
+    "embeddedSystems": "Embedded Systems",
+    "networking": "Networking",
+    "requirementsAnalysis": "Requirements Analysis",
+    "dataModeling": "Data Modeling",
+    "technicalDocumentation": "Technical Documentation",
+    "systemOptimization": "System Optimization",
+    "businessProcessModeling": "Business Process Modeling",
+    "dataVisualization": "Data Visualization",
+    "projectManagement": "Project Management"
   },
-  
   
     "experience": {
       "title": "Experiences",
@@ -175,7 +181,7 @@
       
   
       "scrabbleDeveloper": {
-        "role": "Full Stack Developer",
+        "role": "Programmer Analyst",
         "company": "Poly Technical",
         "date": "Multiplayer Scrabble Game",
         "desc1": "✨ Designed and developed a multiplayer game application with real-time chat features.",
@@ -200,7 +206,7 @@
       },
   
       "secondYearProject": {
-        "role": "Full Stack Developer",
+        "role": "Programmer Analyst",
         "company": "Poly Technical",
         "date": "Second Year Project",
         "desc1": "✨ Developed the first version of a two-player Scrabble game.",
