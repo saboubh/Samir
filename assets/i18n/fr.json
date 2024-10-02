@@ -122,6 +122,18 @@
     "details": "Détails de l'expérience",
     "close": "Fermer",
     
+    
+      "prof": {
+        "role": "Enseignant Systèmes d'Exploitation et Programmation",
+        "company": "Cégep Marie-Victorin Montréal",
+        "date": "09/2024 - à ce jour",
+        "desc1": "✨ Enseignement des concepts fondamentaux des systèmes d'exploitation.",
+        "desc2": "✨ Formation des étudiants en programmation et développement logiciel.",
+        "desc3": "✨ Encadrement des projets pratiques et des travaux de recherche des étudiants."
+      }
+    
+
+    ,
     "fullStackDeveloper": {
       "role": "Développeur Full Stack",
       "company": "Comparastore",

@@ -118,6 +118,17 @@
       "details": "Experience Details",
       "close": "Close",
       
+        "prof": {
+          "role": "Operating Systems and Programming Instructor",
+          "company": "Cégep Marie-Victorin Montréal",
+          "date": "09/2024 - Present",
+          "desc1": "✨ Taught fundamental concepts of operating systems.",
+          "desc2": "✨ Trained students in programming and software development.",
+          "desc3": "✨ Supervised practical projects and student research."
+        }
+      ,
+      
+      
       "fullStackDeveloper": {
         "role": "Full Stack Developer",
         "company": "Comparastore",
