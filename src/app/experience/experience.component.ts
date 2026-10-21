@@ -107,7 +107,7 @@ export class ExperienceComponent {
         role: 'experience.fullStackDeveloper.role',
         company: 'experience.fullStackDeveloper.company',
         color: '#2563eb',
-        companylogo: '../../../assets/images/compa.jpg',
+        companylogo: 'assets/images/compa.jpg',
         date: 'experience.fullStackDeveloper.date',
         desc: [
           'experience.fullStackDeveloper.desc1',
@@ -136,7 +136,7 @@ export class ExperienceComponent {
         role: 'experience.programmerAnalyst.role',
         company: 'experience.programmerAnalyst.company',
         color: '#f97316',
-        companylogo: '../../../assets/images/ob.jpg',
+        companylogo: 'assets/images/ob.jpg',
         date: 'experience.programmerAnalyst.date',
         desc: [
           'experience.programmerAnalyst.desc1',
@@ -150,8 +150,8 @@ export class ExperienceComponent {
         companyUrl: 'https://www.facebook.com/openbook.live/',
         descBullets: [],
         photoList: [
-          { title: 'OpenBook', filename: '../../../assets/images/ob1.png', description: 'Musician Dashboard' },
-          { title: 'OpenBook', filename: '../../../assets/images/ob2.jpg', description: 'Chat' }
+          { title: 'OpenBook', filename: 'assets/images/ob1.png', description: 'Musician Dashboard' },
+          { title: 'OpenBook', filename: 'assets/images/ob2.jpg', description: 'Chat' }
         ]
       },
       {
@@ -159,7 +159,7 @@ export class ExperienceComponent {
         role: 'experience.softwareEngineer.role',
         company: 'experience.softwareEngineer.company',
         color: '#7c3aed',
-        companylogo: '../../../assets/images/smolCell.png',
+        companylogo: 'assets/images/smolCell.png',
         date: 'experience.softwareEngineer.date',
         desc: [
           'experience.softwareEngineer.desc1',
@@ -176,8 +176,8 @@ export class ExperienceComponent {
           }
         ],
         photoList: [
-          { title: 'experience.softwareEngineer.photoList1.title', filename: '../../../assets/images/smolCell.png', description: 'experience.softwareEngineer.photoList1.description' },
-          { title: 'experience.softwareEngineer.photoList2.title', filename: '../../../assets/images/smol.jpg', description: 'experience.softwareEngineer.photoList2.description' }
+          { title: 'experience.softwareEngineer.photoList1.title', filename: 'assets/images/smolCell.png', description: 'experience.softwareEngineer.photoList1.description' },
+          { title: 'experience.softwareEngineer.photoList2.title', filename: 'assets/images/smol.jpg', description: 'experience.softwareEngineer.photoList2.description' }
         ]
       },
       {
@@ -185,7 +185,7 @@ export class ExperienceComponent {
         role: 'experience.scrabbleDeveloper.role',
         company: 'experience.scrabbleDeveloper.company',
         color: '#0284c7',
-        companylogo: '../../../assets/images/scrbl.gif',
+        companylogo: 'assets/images/scrbl.gif',
         date: 'experience.scrabbleDeveloper.date',
         desc: [
           'experience.scrabbleDeveloper.desc1',
@@ -219,7 +219,7 @@ export class ExperienceComponent {
         role: 'experience.secondYearProject.role',
         company: 'experience.secondYearProject.company',
         color: '#ea580c',
-        companylogo: '../../../assets/images/poly.JPG',
+        companylogo: 'assets/images/poly.JPG',
         date: 'experience.secondYearProject.date',
         desc: [
           'experience.secondYearProject.desc1',
@@ -235,7 +235,7 @@ export class ExperienceComponent {
         role: 'experience.firstYearProject.role',
         company: 'experience.firstYearProject.company',
         color: '#b45309',
-        companylogo: '../../../assets/images/poly.JPG',
+        companylogo: 'assets/images/poly.JPG',
         date: 'experience.firstYearProject.date',
         desc: [
           'experience.firstYearProject.desc1',

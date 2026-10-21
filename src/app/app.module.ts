@@ -31,7 +31,9 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 // Fonction de chargement pour ngx-translate
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
+  // Keep the path relative to the document base so translations also load
+  // when the application is hosted under /Samir/ on GitHub Pages.
+  return new TranslateHttpLoader(http, 'assets/i18n/', '.json');
 }
 
 @NgModule({
