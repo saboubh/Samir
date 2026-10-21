@@ -18,7 +18,7 @@ export const fadeIn = [
 
   transition('* => fadeInRight', [
 
-    style({ opacity: 0, transform: 'translateX(-20px)' }),
+    style({ opacity: 0, transform: 'translateX(20px)' }),
 
     animate('{{timing}} {{delay}} ease-in', style('*'))
 
@@ -26,7 +26,7 @@ export const fadeIn = [
 
   transition('* => fadeInLeft', [
 
-    style({ opacity: 0, transform: 'translateX(20px)' }),
+    style({ opacity: 0, transform: 'translateX(-20px)' }),
 
     animate('{{timing}} {{delay}} ease-in', style('*'))
 

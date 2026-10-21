@@ -33,7 +33,6 @@
               "./node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
-              "./node_modules/angular-colorthief/angular-colorthief.js",
               "./node_modules/github-calendar/dist/github-calendar.min.js"
             ]
           },
@@ -102,9 +101,7 @@
               "node_modules/font-awesome/css/font-awesome.css",
               "./node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": [
-              "./node_modules/angular-colorthief/angular-colorthief.js"
-            ]
+            "scripts": []
           }
         },
         "lint": {

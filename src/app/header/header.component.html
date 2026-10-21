@@ -1,17 +1,35 @@
-<div>
-  <header class="header">
-    <a href="" class="logo">
-      <div class="greeting-image-div">
-        <img src="../../assets/images/grade.JPG" alt="Grade_Poly">
-      </div>
-    </a>
+<header class="header" wmAnimate="fadeInDown" once speed="faster">
+  <a href="#greeting" class="logo" [attr.aria-label]="'navigation.home' | translate" (click)="closeMenu()">
+    <span class="greeting-image-div">
+      <img src="../../assets/images/grade.JPG" alt="Samir Boussaadi" width="64" height="64">
+    </span>
+  </a>
+
+  <button
+    type="button"
+    class="menu-toggle"
+    [class.menu-toggle--open]="isMenuOpen"
+    [attr.aria-expanded]="isMenuOpen"
+    aria-controls="main-navigation"
+    [attr.aria-label]="(isMenuOpen ? 'navigation.closeMenu' : 'navigation.openMenu') | translate"
+    (click)="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav id="main-navigation" class="nav-panel" [class.nav-panel--open]="isMenuOpen">
     <ul class="menu">
-      <li><a href="#greeting">{{ 'ABOUT' | translate }}</a></li>
-      <li><a href="#skills">{{ 'SKILLS' | translate }}</a></li>
-      <li><a href="#education">{{ 'EDUCATION' | translate }}</a></li>
-      <li><a href="#experience">{{ 'EXPERIENCES' | translate }}</a></li>
-      <li><a href="#contact">{{ 'CONTACT' | translate }}</a></li>
-      <li><button (click)="toggleLanguage()">{{ currentLangLabel }}</button></li>
+      <li><a href="#greeting" (click)="closeMenu()">{{ 'ABOUT' | translate }}</a></li>
+      <li><a href="#skills" (click)="closeMenu()">{{ 'SKILLS' | translate }}</a></li>
+      <li><a href="#experience" (click)="closeMenu()">{{ 'EXPERIENCES' | translate }}</a></li>
+      <li><a href="#education" (click)="closeMenu()">{{ 'EDUCATION' | translate }}</a></li>
+      <li><a href="#contact" (click)="closeMenu()">{{ 'CONTACT' | translate }}</a></li>
+      <li>
+        <button type="button" class="language-button" (click)="toggleLanguage()">
+          {{ currentLangLabel }}
+        </button>
+      </li>
     </ul>
-  </header> 
-</div>
+  </nav>
+</header>

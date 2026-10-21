@@ -1,12 +1,73 @@
-<div *ngIf="workExperiences.viewExperiences">
-  <div id="experience">
-    <div class="experience-container" id="workExperience">
-      <div>
-        <h1 class="experience-heading">{{ 'experience.title' | translate }}</h1>
-        <div class="experience-cards-div">
-          <app-experience-card *ngFor="let card of workExperiences.experience" [experience]="card"></app-experience-card>
+<div class="experience-page">
+  <header class="experience-hero" wmAnimate="fadeInUp" aos once speed="faster">
+    <div class="experience-hero__copy">
+      <p class="section-eyebrow">{{ 'experience.expertise.eyebrow' | translate }}</p>
+      <h1 id="experience-heading">{{ 'experience.expertise.title' | translate }}</h1>
+      <p class="experience-hero__intro">{{ 'experience.expertise.intro' | translate }}</p>
+    </div>
+
+    <div class="experience-badge" [attr.aria-label]="'experience.expertise.badgeAria' | translate">
+      <strong>{{ 'experience.expertise.badgeValue' | translate }}</strong>
+      <span>{{ 'experience.expertise.badgeLabel' | translate }}</span>
+    </div>
+  </header>
+
+  <div class="expertise-list" aria-labelledby="experience-heading">
+    <article
+      *ngFor="let area of expertiseAreas; trackBy: trackByArea"
+      class="expertise-feature"
+      [ngClass]="['expertise-feature--' + area.tone, area.reversed ? 'expertise-feature--reversed' : '']"
+      [attr.aria-labelledby]="area.id + '-title'"
+      wmAnimate="fadeInUp"
+      aos
+      once
+      speed="faster">
+      <div class="expertise-feature__copy">
+        <div class="feature-heading-row">
+          <span class="feature-index" aria-hidden="true">{{ area.index }}</span>
+          <p class="feature-eyebrow">{{ area.eyebrowKey | translate }}</p>
+        </div>
+
+        <h2 [id]="area.id + '-title'">{{ area.titleKey | translate }}</h2>
+        <p class="feature-summary">{{ area.summaryKey | translate }}</p>
+
+        <ul class="capability-list">
+          <li *ngFor="let capabilityKey of area.capabilityKeys">
+            <span aria-hidden="true">✓</span>
+            {{ capabilityKey | translate }}
+          </li>
+        </ul>
+
+        <div class="product-list" [attr.aria-label]="'experience.expertise.technologies' | translate">
+          <span *ngFor="let product of area.products" class="product-chip">{{ product }}</span>
         </div>
       </div>
-    </div>
+
+      <figure class="expertise-feature__visual">
+        <img
+          [src]="area.image"
+          [alt]="area.imageAltKey | translate"
+          width="1200"
+          height="800"
+          loading="lazy"
+          decoding="async">
+        <span class="visual-glow" aria-hidden="true"></span>
+      </figure>
+    </article>
   </div>
+
+  <section class="career-section" aria-labelledby="career-heading">
+    <header class="career-heading">
+      <p class="section-eyebrow">{{ 'experience.career.eyebrow' | translate }}</p>
+      <h2 id="career-heading">{{ 'experience.career.title' | translate }}</h2>
+      <p>{{ 'experience.career.intro' | translate }}</p>
+    </header>
+
+    <div class="experience-cards-div">
+      <app-experience-card
+        *ngFor="let card of workExperiences.experience; trackBy: trackByExperience"
+        [experience]="card">
+      </app-experience-card>
+    </div>
+  </section>
 </div>

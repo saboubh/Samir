@@ -1,100 +1,228 @@
-.header {
-  position: fixed; /* Fixe le header en haut de la page */
-  top: 0;          /* Positionne le header tout en haut */
-  left: 0;         /* Positionne le header tout à gauche */
-  right: 0;        /* Étend le header jusqu'à la droite */
-  max-width: 90%;
-  padding: 20px 10px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Espace entre le logo et le menu */
-  background-color: #fff; /* Assure que le header a un fond */
-  z-index: 1000;    /* Assure que le header reste au-dessus des autres éléments */
+:host {
+  display: block;
 }
 
+.header {
+  position: fixed;
+  z-index: 1000;
+  top: 1rem;
+  right: 0;
+  left: 0;
+  display: flex;
+  box-sizing: border-box;
+  width: min(calc(100% - 2rem), 1280px);
+  min-height: 4.75rem;
+  margin: 0 auto;
+  padding: .45rem .55rem;
+  align-items: center;
+  gap: .75rem;
+  background: rgba(255, 255, 255, .9);
+  border: 1px solid rgba(148, 163, 184, .28);
+  border-radius: 999px;
+  box-shadow: 0 14px 42px rgba(15, 23, 42, .12);
+  backdrop-filter: blur(18px);
+}
 
 .logo {
   display: flex;
+  flex: 0 0 auto;
   align-items: center;
-  margin-right: 20px; /* Espacement entre la photo et la liste */
+  border-radius: 50%;
 }
 
 .greeting-image-div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80px;  /* Largeur réduite de la div contenant l'image */
-  height: 80px; /* Hauteur réduite de la div contenant l'image */
+  display: grid;
+  width: 3.75rem;
+  height: 3.75rem;
+  place-items: center;
   overflow: hidden;
-  border-radius: 50%; /* Rendre la div circulaire */
-  margin-right: 1px; /* Ajouter un peu d'espace à droite de l'image */
+  border: 2px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 5px 14px rgba(15, 23, 42, .18);
 }
 
 .greeting-image-div img {
-  width: 100%;  /* L'image occupe toute la largeur de la div */
-  height: auto;
-  border-radius: 50%; /* L'image est circulaire */
-  object-fit: cover; /* Assure que l'image couvre toute la div sans déformation */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav-panel {
+  min-width: 0;
+  flex: 1;
 }
 
 .menu {
-  flex-grow: 1;  /* Permet à la liste de prendre tout l'espace restant */
   display: flex;
-  justify-content: space-between; /* Répartir les éléments de manière égale */
-  list-style: none;
   margin: 0;
-  overflow: hidden;
-  background-color: #fff;
-  border: 2px solid #007bff; /* Définir une bordure autour de la liste */
-  border-radius: 50px; /* Arrondir fortement les coins pour un effet elliptique */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ajouter une ombre pour un effet de profondeur */
+  padding: 0;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(.1rem, 1vw, .65rem);
+  list-style: none;
 }
-
-
 
 .menu li {
-  display: inline-block;
+  flex: 0 0 auto;
 }
 
-.menu li a {
-  display: block;
-  padding: 15px 15px;
-  font-weight: 400;
-  color: black;
-  text-decoration: none;
-}
-
-.menu li a:hover,
-.header .menu-btn:hover {
-  background-color: #f4f4f4;
-}
-
-button {
-  margin: 10px;
-  background: transparent;
-  border: 2px solid #007bff;
-  border-radius: 50%;
-  padding: 5px;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  transition: transform 0.3s ease, border-color 0.3s ease;
-  display: flex;
+.menu a,
+.language-button {
+  display: inline-flex;
+  min-height: 2.75rem;
+  box-sizing: border-box;
+  padding: .68rem clamp(.65rem, 1.4vw, 1.1rem);
   align-items: center;
   justify-content: center;
+  color: #1f2937;
+  background: transparent;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  font: inherit;
+  font-size: .78rem;
+  font-weight: 650;
+  text-decoration: none;
+  transition: color .2s ease, background-color .2s ease, transform .2s ease;
 }
 
-button:hover {
-  transform: scale(1.1);
-  border-color: #0056b3;
+.language-button {
+  min-width: 2.75rem;
+  padding-right: .75rem;
+  padding-left: .75rem;
+  color: #fff;
+  background: #111827;
 }
 
-button:focus {
-  outline: none;
-  border-color: #0056b3;
+.menu a:focus-visible,
+.language-button:focus-visible,
+.menu-toggle:focus-visible,
+.logo:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, .42);
+  outline-offset: 3px;
 }
 
-button:active {
-  transform: scale(0.9);
+.menu-toggle {
+  display: none;
+  width: 2.85rem;
+  height: 2.85rem;
+  margin-left: auto;
+  padding: .65rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .28rem;
+  background: #111827;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 1.15rem;
+  height: 2px;
+  background: #fff;
+  border-radius: 999px;
+  transition: transform .2s ease, opacity .2s ease;
+}
+
+.menu-toggle--open span:first-child {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.menu-toggle--open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle--open span:last-child {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .menu a:hover {
+    color: #5b21b6;
+    background: #f4f0ff;
+  }
+
+  .language-button:hover {
+    background: #6d28d9;
+    transform: translateY(-1px);
+  }
+}
+
+@media (max-width: 920px) {
+  .header {
+    top: .6rem;
+    width: min(calc(100% - 1rem), 1280px);
+    min-height: 4rem;
+    padding: .4rem .5rem;
+  }
+
+  .greeting-image-div {
+    width: 3.15rem;
+    height: 3.15rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-panel {
+    position: absolute;
+    top: calc(100% + .65rem);
+    right: 0;
+    width: min(21rem, calc(100vw - 1rem));
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-8px) scale(.98);
+    transform-origin: top right;
+    transition: max-height .3s ease, opacity .2s ease, transform .25s ease, visibility .25s;
+  }
+
+  .nav-panel--open {
+    max-height: 32rem;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  .menu {
+    display: grid;
+    padding: .7rem;
+    background: rgba(255, 255, 255, .97);
+    border: 1px solid #e4e7ec;
+    border-radius: 22px;
+    box-shadow: 0 24px 60px rgba(15, 23, 42, .2);
+    backdrop-filter: blur(18px);
+  }
+
+  .menu li,
+  .menu a,
+  .language-button {
+    width: 100%;
+  }
+
+  .menu a,
+  .language-button {
+    min-height: 2.85rem;
+    padding: .72rem 1rem;
+    justify-content: flex-start;
+    font-size: .88rem;
+  }
+
+  .language-button {
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu a,
+  .language-button,
+  .menu-toggle span,
+  .nav-panel {
+    transition: none;
+  }
 }

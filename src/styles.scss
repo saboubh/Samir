@@ -18,6 +18,14 @@ html,
 body {
   scroll-behavior: smooth;
 }
+
+html {
+  scroll-padding-top: 120px;
+}
+
+section {
+  scroll-margin-top: 120px;
+}
 body {
   margin: 0;
   font: 19px / 23px Montserrat, "Montserrat", sans-serif;
@@ -30,5 +38,21 @@ body {
   body {
     font-size: 16px;
     line-height: normal;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html,
+  body {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
   }
 }

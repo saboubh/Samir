@@ -5,10 +5,15 @@
   "PROJECTS": "Projets",
   "EXPERIENCES": "Expériences",
   "CONTACT": "Contactez-moi",
+  "navigation": {
+    "home": "Retour à l'accueil",
+    "openMenu": "Ouvrir le menu de navigation",
+    "closeMenu": "Fermer le menu de navigation"
+  },
   
   "greeting": {
-    "title": "Bonjour à tous, je suis Samir",
-    "subTitle": "Je suis un développeur junior dédié avec une solide base en génie logiciel et une expérience pratique en développement full-stack. Je cherche activement une opportunité pour appliquer mes compétences et élargir mes connaissances dans un environnement dynamique et innovant. Ma curiosité innée et ma capacité d'adaptation me permettent de relever une large gamme de défis techniques, que ce soit en développement front-end ou back-end. Je suis particulièrement attiré par les projets qui encouragent l'apprentissage continu et favorisent une culture de travail collaborative. Je suis impatient de contribuer de manière significative à une équipe avant-gardiste et dévouée. Si vous cherchez un développeur passionné prêt à avoir un impact positif, j'aimerais beaucoup échanger :)"
+    "title": "Bonjour, je suis Samir — expert full-stack en traçabilité RFID & IoT",
+    "subTitle": "Je conçois des solutions de traçabilité multimarques de bout en bout, basées sur des tags UHF/RAIN RFID, des balises BLE et des trackers GPS/IoT. J'intègre notamment les écosystèmes Impinj (R720, R700, Speedway R420/R220 et xSpan), Zebra (RFD90 avec RFD9030/RFD9090, RFD40, RFD8500, FXR90, FX9600 et FX7500) et Digital Matter (Manta Fusion, Dart3 BLE, Oyster3, Remora3, Yabby3 et G150), parmi d'autres marques selon les besoins du projet. Je prends en charge toute la chaîne technique : hardware et edge/CAP, applications mobiles iOS/Android, bases de données, API, back-end, front-end, cloud et cartographie temps réel indoor/outdoor."
   },
   "buttons": {
     "contact": "Me contacter",
@@ -62,7 +67,7 @@
     "title": "Éducation 💻",
     "bachelorSoftwareEngineering": {
       "heading": "B.Eng Baccalauréat en Génie Logiciel",
-      "duration": "2023",
+      "duration": "2018",
       "subtitle": "Polytechnique Montréal -Université Technologique (QC) -",
       "content": "Réussi avec succès"
     },
@@ -107,11 +112,57 @@
     "seeMore": "Voir plus",
     "details": "Détails de l'expérience",
     "close": "Fermer",
+    "visitCompany": "Visiter le site de",
+    "expertise": {
+      "eyebrow": "Expertise full-stack · RFID & IoT",
+      "title": "Du tag au cloud : une traçabilité multimarque de bout en bout",
+      "intro": "Expert full-stack en traçabilité RFID et IoT, je transforme les lectures de tags et les positions des trackers en données métier fiables et exploitables. Mon expertise couvre le hardware, les services edge/CAP, le mobile, les bases de données, les API, le back-end, le front-end, le cloud et la visualisation en temps réel.",
+      "badgeValue": "< 5 ans",
+      "badgeLabel": "d'expérience professionnelle",
+      "badgeAria": "Moins de cinq ans d'expérience professionnelle",
+      "technologies": "Marques, modèles, tags et technologies intégrés",
+      "rfid": {
+        "eyebrow": "Tags, lecteurs & trackers",
+        "title": "Une expertise multimarque adaptée à chaque terrain",
+        "summary": "Impinj, Zebra et Digital Matter font partie des marques que j'intègre, parmi d'autres constructeurs. Je sélectionne, configure et connecte les tags, lecteurs et trackers les mieux adaptés aux contraintes métier et opérationnelles.",
+        "capability1": "Traçabilité par tags UHF/RAIN RFID et BLE : identification, encodage, association tag-actif, inventaire, localisation et historique des mouvements.",
+        "capability2": "Écosystème Impinj : R720, R700, Speedway R420/R220, xSpan et xArray, avec développement d'applications CAP et de services edge spécialisés.",
+        "capability3": "Écosystème Zebra : série RFD90 (RFD9030/RFD9090), RFD40, RFD8500, FXR90, FX9600 et FX7500, intégrés aux applications mobiles et aux processus métier.",
+        "capability4": "Écosystème Digital Matter : Manta Fusion, Dart3 BLE, Oyster3, Remora3, Yabby3 et G150 pour la télémétrie, le GPS, le BLE et le suivi d'actifs.",
+        "imageAlt": "Écosystème de traçabilité composé de lecteurs RFID, d'un terminal portatif et de dispositifs IoT dans un entrepôt"
+      },
+      "mobile": {
+        "eyebrow": "Applications terrain",
+        "title": "Applications RFID adaptées à iOS et Android",
+        "summary": "Je développe des applications iOS et Android qui communiquent avec les lecteurs, tags et trackers, puis synchronisent les données avec les API, bases de données et plateformes back-end.",
+        "capability1": "Connexion multimarque aux lecteurs et accessoires via SDK, API et Bluetooth, avec gestion claire de l'état du périphérique.",
+        "capability2": "Parcours d'inventaire, association tag-actif, localisation d'un article, validation et correction des opérations.",
+        "capability3": "Fonctionnement résilient sur le terrain, incluant file d'attente locale et synchronisation lorsque la connexion revient.",
+        "capability4": "Interface cohérente sur iOS et Android avec retours de lecture, diagnostic et traitement explicite des erreurs.",
+        "imageAlt": "Téléphone iOS, terminal Android renforcé et lecteur RFID portatif utilisés pour suivre des colis"
+      },
+      "realtime": {
+        "eyebrow": "Plateforme & cartographie",
+        "title": "Traçabilité en temps réel, à l'intérieur comme à l'extérieur",
+        "summary": "Je réunis les événements RFID indoor et les positions GPS/IoT outdoor dans une plateforme full-stack reliant hardware, edge, back-end, bases de données, front-end et cartes live.",
+        "capability1": "Carte en direct avec positions, déplacements, dernière remontée et statut de chaque actif ou dispositif.",
+        "capability2": "Passage fluide entre plan intérieur, sites logistiques et suivi extérieur sans perdre le contexte de l'actif.",
+        "capability3": "Recherche, filtres, historique, zones géographiques et alertes pour accélérer les décisions opérationnelles.",
+        "capability4": "Architecture complète, du hardware et des services edge jusqu'aux API, bases de données, interfaces front-end et tableaux de bord temps réel.",
+        "imageAlt": "Carte en direct reliant un entrepôt, des véhicules, des zones géographiques et un tableau de bord de suivi"
+      }
+    },
+    "career": {
+      "eyebrow": "Parcours sélectionné",
+      "title": "Expériences et réalisations",
+      "intro": "Une sélection de projets couvrant toute la chaîne de traçabilité : hardware, tags, mobile, bases de données, API, back-end, front-end, cloud et temps réel.",
+      "cardLabel": "Expérience"
+    },
     
     "fullStackDeveloper": {
       "role": "Développeur Full Stack",
       "company": "Comparastore",
-      "date": "Juin 2023 – Déc 2023",
+      "date": "2018",
       "desc1": "✨ Collaboration avec l'équipe pour comprendre les exigences spécifiques de la version 2.0 du tableau de bord Comparastore.",
       "desc2": "✨ Évaluation des fonctionnalités existantes et identification des améliorations nécessaires.",
       "desc3": "✨ Mise en place du backend du tableau de bord en utilisant Next.js.",
@@ -131,7 +182,7 @@
     "programmerAnalyst": {
       "role": "Analyste Programmeur",
       "company": "OpenBook",
-      "date": "Février 2019 – Janvier 2021",
+      "date": "2014",
       "desc1": "✨ Création de l'interface utilisateur en utilisant Angular, assurant la réactivité et la convivialité.",
       "desc2": "✨ Conception de la structure de la base de données Firebase selon les exigences de l'application.",
       "desc3": "✨ Configuration et développement du serveur backend avec Node.js.",

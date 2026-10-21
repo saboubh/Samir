@@ -1,52 +1,121 @@
-<div class="experience-card" wmAnimate="bumpIn" aos speed="normal">
-  <div [ngStyle]="{background: experience.color}" class="experience-banner">
-    <div class="experience-blurred_div"></div>
-    <div class="experience-div-company" title="Click to visit the company's site">
-      <a [href]="experience.companyUrl" target="_blank" rel="noopener noreferrer">
-        <img crossOrigin="anonymous" class="experience-div-company" [src]="experience.companylogo" alt="{{experience.company | translate}}">
-      </a>
-    </div>
+<article class="experience-card" [style.border-top-color]="experience.color">
+  <div
+    class="experience-card__visual"
+    [style.background]="'linear-gradient(135deg, ' + experience.color + ', #111827)'">
+    <a
+      class="company-logo-link"
+      [href]="experience.companyUrl"
+      target="_blank"
+      rel="noopener noreferrer"
+      [attr.aria-label]="('experience.visitCompany' | translate) + ' ' + (experience.company | translate)">
+      <img
+        class="company-logo"
+        [src]="experience.companylogo"
+        [alt]="experience.company | translate"
+        width="88"
+        height="88"
+        loading="lazy"
+        decoding="async">
+    </a>
+    <span class="company-pill">{{ experience.company | translate }}</span>
   </div>
 
-  <h5 class="experience-text-role">{{ experience.role | translate }}</h5>
-  <h5 class="experience-text-date">{{ experience.date | translate }}</h5>
+  <div class="experience-card__content">
+    <p class="card-eyebrow">{{ 'experience.career.cardLabel' | translate }}</p>
+    <h3>{{ experience.role | translate }}</h3>
+    <p class="experience-meta">
+      <span>{{ experience.company | translate }}</span>
+      <span aria-hidden="true">•</span>
+      <span>{{ experience.date | translate }}</span>
+    </p>
 
-  <button class="toggle-button" (click)="openModal()">
-    {{ 'experience.seeMore' | translate }}
-  </button>
+    <ul class="experience-preview">
+      <li *ngFor="let description of experience.desc | slice:0:2">
+        {{ description | translate }}
+      </li>
+    </ul>
 
-  <div class="modal" [ngClass]="{'is-active': isModalActive}">
-    <div class="modal-background" (click)="closeModal()"></div>
+    <button
+      #detailsButton
+      type="button"
+      class="details-button"
+      aria-haspopup="dialog"
+      [attr.aria-expanded]="isModalActive"
+      [attr.aria-controls]="'experience-dialog-' + experience.id"
+      (click)="openModal()">
+      {{ 'experience.seeMore' | translate }}
+      <span aria-hidden="true">→</span>
+    </button>
+  </div>
+</article>
 
-    <div class="modal-content">
-      <div class="box">
-        <h1 class="modal-title">{{ 'experience.details' | translate }}</h1>
+<div *ngIf="isModalActive" class="modal-shell">
+  <div class="modal-backdrop" aria-hidden="true" (click)="closeModal()"></div>
 
-        <div *ngFor="let list of experience.desc">
-          <p>{{ list | translate }}</p>
-        </div>
+  <section
+    class="modal-content"
+    role="dialog"
+    aria-modal="true"
+    [id]="'experience-dialog-' + experience.id"
+    [attr.aria-labelledby]="'experience-dialog-title-' + experience.id">
+    <button
+      #modalCloseButton
+      type="button"
+      class="modal-icon-close"
+      [attr.aria-label]="'experience.close' | translate"
+      (click)="closeModal()">
+      <span aria-hidden="true">×</span>
+    </button>
 
-        <div class="video-container">
-          <div *ngFor="let video of experience.descBullets">
-            <h3 class="video-title">{{ video.title | translate }}</h3>
-            <iframe width="350" height="220" [src]="getSafeUrl(video.url)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <p class="video-description">{{ video.description | translate }}</p>
+    <header class="modal-header">
+      <p>{{ experience.company | translate }}</p>
+      <h2 [id]="'experience-dialog-title-' + experience.id">{{ experience.role | translate }}</h2>
+      <span>{{ experience.date | translate }}</span>
+    </header>
+
+    <div class="modal-body">
+      <h3>{{ 'experience.details' | translate }}</h3>
+      <ul class="modal-highlights">
+        <li *ngFor="let description of experience.desc">{{ description | translate }}</li>
+      </ul>
+
+      <div
+        *ngIf="safeVideos.length || (experience.photoList && experience.photoList.length)"
+        class="media-grid">
+        <article *ngFor="let video of safeVideos" class="media-card">
+          <h4>{{ video.title | translate }}</h4>
+          <div class="video-frame">
+            <iframe
+              [src]="video.safeUrl"
+              [attr.title]="video.title | translate"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
           </div>
-          <div *ngFor="let photo of experience.photoList">
-            <h3 class="photo-title">{{ photo.title | translate }}</h3>
-            <a [href]="photo.filename" target="_blank" rel="noopener noreferrer">
-              <img [src]="photo.filename" alt="{{ photo.title }}" width="350" height="220" />
-            </a>
-            <p class="photo-description">{{ photo.description | translate }}</p>
-          </div>
-        </div>
+          <p>{{ video.description | translate }}</p>
+        </article>
 
-        <button class="modal-close-button" (click)="closeModal()">
-          {{ 'experience.close' | translate }}
-        </button>
+        <article *ngFor="let photo of experience.photoList" class="media-card">
+          <h4>{{ photo.title | translate }}</h4>
+          <a [href]="photo.filename" target="_blank" rel="noopener noreferrer">
+            <img
+              [src]="photo.filename"
+              [alt]="photo.title | translate"
+              width="700"
+              height="440"
+              loading="lazy"
+              decoding="async">
+          </a>
+          <p>{{ photo.description | translate }}</p>
+        </article>
       </div>
     </div>
 
-    <button class="modal-close is-large" aria-label="close" (click)="closeModal()"></button>
-  </div>
+    <footer class="modal-footer">
+      <button type="button" class="modal-close-button" (click)="closeModal()">
+        {{ 'experience.close' | translate }}
+      </button>
+    </footer>
+  </section>
 </div>

@@ -1,45 +1,394 @@
+:host {
+  display: block;
+  color: #101828;
+}
+
+.experience-page {
+  width: min(calc(100% - 2rem), 1200px);
+  margin: 0 auto;
+  padding: 8rem 0 5rem;
+}
+
+.experience-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: end;
+  overflow: hidden;
+  padding: clamp(2rem, 6vw, 4.75rem);
+  color: #fff;
+  background:
+    radial-gradient(circle at 85% 15%, rgba(56, 189, 248, .24), transparent 32%),
+    radial-gradient(circle at 5% 95%, rgba(139, 92, 246, .32), transparent 38%),
+    linear-gradient(135deg, #071226 0%, #111b3d 52%, #20105b 100%);
+  border: 1px solid rgba(255, 255, 255, .1);
+  border-radius: 32px;
+  box-shadow: 0 28px 70px rgba(15, 23, 42, .22);
+}
+
+.experience-hero::after {
+  position: absolute;
+  right: -6rem;
+  bottom: -9rem;
+  width: 22rem;
+  height: 22rem;
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3rem rgba(255, 255, 255, .025), 0 0 0 6rem rgba(255, 255, 255, .018);
+  content: '';
+}
+
+.experience-hero__copy,
+.experience-badge {
+  position: relative;
+  z-index: 1;
+}
+
+.section-eyebrow,
+.feature-eyebrow {
+  margin: 0 0 .8rem;
+  color: #7c3aed;
+  font-size: .76rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.experience-hero .section-eyebrow {
+  color: #8be6ff;
+}
+
+.experience-hero h1 {
+  max-width: 800px;
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  font-weight: 650;
+  line-height: 1.03;
+  letter-spacing: -.045em;
+}
+
+.experience-hero__intro {
+  max-width: 760px;
+  margin: 1.4rem 0 0;
+  color: #cbd5e1;
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  line-height: 1.75;
+}
+
+.experience-badge {
+  display: flex;
+  width: 9.5rem;
+  min-height: 9.5rem;
+  padding: 1.25rem;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(255, 255, 255, .09);
+  border: 1px solid rgba(255, 255, 255, .18);
+  border-radius: 50%;
+  backdrop-filter: blur(14px);
+  text-align: center;
+}
+
+.experience-badge strong {
+  color: #fff;
+  font-size: 1.75rem;
+  line-height: 1;
+}
+
+.experience-badge span {
+  margin-top: .55rem;
+  color: #cbd5e1;
+  font-size: .72rem;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.expertise-list {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.expertise-feature {
+  --feature-accent: #7c3aed;
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(20rem, .95fr);
+  min-height: 32rem;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e7eaf0;
+  border-radius: 28px;
+  box-shadow: 0 18px 50px rgba(15, 23, 42, .08);
+}
+
+.expertise-feature--cyan {
+  --feature-accent: #0891b2;
+}
+
+.expertise-feature--blue {
+  --feature-accent: #2563eb;
+}
+
+.expertise-feature__copy {
+  align-self: center;
+  padding: clamp(2rem, 5vw, 4rem);
+}
+
+.expertise-feature--reversed .expertise-feature__copy {
+  order: 2;
+}
+
+.expertise-feature--reversed .expertise-feature__visual {
+  order: 1;
+}
+
+.feature-heading-row {
+  display: flex;
+  gap: .85rem;
+  align-items: center;
+}
+
+.feature-index {
+  display: inline-grid;
+  width: 2.35rem;
+  height: 2.35rem;
+  place-items: center;
+  color: var(--feature-accent);
+  background: #f4f0ff;
+  border-radius: 12px;
+  font-size: .75rem;
+  font-weight: 800;
+}
+
+.expertise-feature--cyan .feature-index {
+  background: #ecfeff;
+}
+
+.expertise-feature--blue .feature-index {
+  background: #eff6ff;
+}
+
+.feature-eyebrow {
+  margin: 0;
+  color: var(--feature-accent);
+}
+
+.expertise-feature h2 {
+  margin: 1.25rem 0 .9rem;
+  color: #101828;
+  font-size: clamp(1.65rem, 3vw, 2.55rem);
+  font-weight: 650;
+  line-height: 1.15;
+  letter-spacing: -.035em;
+}
+
+.feature-summary {
+  margin: 0;
+  color: #475467;
+  line-height: 1.75;
+}
+
+.capability-list {
+  display: grid;
+  gap: .75rem;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.capability-list li {
+  display: grid;
+  grid-template-columns: 1.4rem minmax(0, 1fr);
+  gap: .6rem;
+  color: #344054;
+  font-size: .93rem;
+  line-height: 1.55;
+}
+
+.capability-list li span {
+  display: grid;
+  width: 1.3rem;
+  height: 1.3rem;
+  margin-top: .08rem;
+  place-items: center;
+  color: #fff;
+  background: var(--feature-accent);
+  border-radius: 50%;
+  font-size: .68rem;
+  font-weight: 800;
+}
+
+.product-list {
+  display: flex;
+  gap: .5rem;
+  margin-top: 1.6rem;
+  flex-wrap: wrap;
+}
+
+.product-chip {
+  padding: .5rem .72rem;
+  color: #344054;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 999px;
+  font-size: .72rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.expertise-feature__visual {
+  position: relative;
+  min-height: 25rem;
+  margin: 0;
+  overflow: hidden;
+  background: #0b1224;
+}
+
+.expertise-feature__visual::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 55%, rgba(7, 18, 38, .34));
+  content: '';
+  pointer-events: none;
+}
+
+.expertise-feature__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s cubic-bezier(.22, 1, .36, 1);
+}
+
+.expertise-feature:hover .expertise-feature__visual img {
+  transform: scale(1.035);
+}
+
+.visual-glow {
+  position: absolute;
+  z-index: 1;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  width: .65rem;
+  height: .65rem;
+  background: #67e8f9;
+  border: 2px solid rgba(255, 255, 255, .85);
+  border-radius: 50%;
+  box-shadow: 0 0 0 .55rem rgba(103, 232, 249, .18), 0 0 1.5rem #22d3ee;
+}
+
+.career-section {
+  padding-top: clamp(5rem, 9vw, 8rem);
+}
+
+.career-heading {
+  max-width: 760px;
+  margin-bottom: 2rem;
+}
+
+.career-heading h2 {
+  margin: 0;
+  color: #101828;
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 650;
+  line-height: 1.1;
+  letter-spacing: -.04em;
+}
+
+.career-heading > p:last-child {
+  margin: 1rem 0 0;
+  color: #667085;
+  line-height: 1.7;
+}
+
 .experience-cards-div {
   display: grid;
-  //grid-template-columns: repeat(3,1fr);
-  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-  gap: 1rem 1rem;
-  //background-color: orange;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
 }
 
-.experience-heading {
- 
-  font-size: 56px;
-  font-weight: 400;
-  margin-bottom: 2rem;
-  display: flex;              /* Active le mode Flexbox */
-  justify-content: center;    /* Centre le contenu horizontalement */
-  align-items: center; 
-}
+@media (max-width: 1000px) {
+  .expertise-feature {
+    grid-template-columns: 1fr;
+  }
 
-.experience-container {
-  display: flex;
-  width: 90%;
-  padding: 20px 10px;
-  margin: 0px auto;
-  margin-top: 2rem;
-}
+  .expertise-feature__copy,
+  .expertise-feature--reversed .expertise-feature__copy {
+    order: 1;
+  }
 
-.experience-container>* {
-  flex: 1;
-  margin-top: 100px;
-}
+  .expertise-feature__visual,
+  .expertise-feature--reversed .expertise-feature__visual {
+    order: 2;
+  }
 
-/* Media Query */
+  .expertise-feature__visual {
+    min-height: 25rem;
+  }
 
-@media (max-width: 1380px) {
-  .experience-heading {
-    font-size: 40px;
+  .experience-cards-div {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (max-width: 768px) {
-  .experience-heading {
-    font-size: 30px;
-    text-align: center;
+@media (max-width: 700px) {
+  .experience-page {
+    width: min(calc(100% - 1.25rem), 1200px);
+    padding-top: 5.5rem;
+  }
+
+  .experience-hero {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    align-items: start;
+    border-radius: 24px;
+  }
+
+  .experience-badge {
+    width: auto;
+    min-height: auto;
+    padding: 1rem 1.25rem;
+    flex-direction: row;
+    gap: .65rem;
+    align-items: baseline;
+    justify-content: flex-start;
+    border-radius: 16px;
+    text-align: left;
+  }
+
+  .experience-badge span {
+    margin: 0;
+  }
+
+  .expertise-feature {
+    min-height: 0;
+    border-radius: 22px;
+  }
+
+  .expertise-feature__visual {
+    min-height: 17rem;
+  }
+
+  .experience-cards-div {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .expertise-feature:hover {
+    box-shadow: 0 24px 70px rgba(15, 23, 42, .12);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .expertise-feature__visual img {
+    transition: none;
+  }
+
+  .expertise-feature:hover .expertise-feature__visual img {
+    transform: none;
   }
 }

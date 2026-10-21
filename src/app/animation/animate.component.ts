@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy, Input, Output, EventEmitter, HostBinding, HostListener, ElementRef } from '@angular/core';
 import { coerceBooleanProperty, coerceNumberProperty } from '@angular/cdk/coercion';
-import { startWith, delay, filter, takeWhile } from 'rxjs/operators';
+import { startWith, delay, takeWhile } from 'rxjs/operators';
 import { Subject, Subscription } from 'rxjs';
 import { trigger } from '@angular/animations';
 import { AnimateService } from './animate.service';
@@ -33,7 +33,11 @@ export type wmAnimations =
 export class AnimateComponent implements OnInit, OnDestroy {
 
   private replay$ = new Subject<boolean>();
-  private sub: Subscription;
+  private sub: Subscription = null;
+  private initialized = false;
+  private pendingTrigger: boolean = null;
+  private inputDisabled = false;
+  private prefersReducedMotion = false;
 
   // Animating parameters
   private timing: string;
@@ -64,13 +68,15 @@ export class AnimateComponent implements OnInit, OnDestroy {
   /** Speeds up or slows down the animation */
   @Input() set speed(speed: wmAnimateSpeed) {
     // Turns the requested speed into a valid timing
-    this.timing = {
+    const timings = {
       slower: '3s',
       slow: '2s',
       normal: '1s',
       fast: '500ms',
       faster: '300ms'
-    }[speed || 'normal'];
+    };
+
+    this.timing = timings[speed] || timings.normal;
   }
 
   /** Delays the animation */
@@ -88,7 +94,10 @@ export class AnimateComponent implements OnInit, OnDestroy {
   }
 
   /** Disables the animation */
-  @Input('disabled') set disableAnimation(value: boolean) { this.disabled = coerceBooleanProperty(value); }
+  @Input('disabled') set disableAnimation(value: boolean) {
+    this.inputDisabled = coerceBooleanProperty(value);
+    this.updateDisabledState();
+  }
   @HostBinding('@.disabled')
   public disabled = false;
 
@@ -100,14 +109,33 @@ export class AnimateComponent implements OnInit, OnDestroy {
   /** Emits at the end of the animation */
   @Output() done = new EventEmitter<void>();
   @HostListener('@animate.done')
-  private animationDone() { this.animating = false; this.animated = true; this.done.emit(); }
+  private animationDone() {
+    this.animating = false;
+    this.animated = true;
+    this.done.emit();
+
+    if (this.pendingTrigger !== null) {
+      const trigger = this.pendingTrigger;
+      this.pendingTrigger = null;
+      this.setTrigger(trigger);
+    }
+  }
 
   /** When true, keeps the animation idle until the next replay triggers */
-  @Input('paused') set pauseAnimation(value: boolean) { this.paused = coerceBooleanProperty(value); }
+  @Input('paused') set pauseAnimation(value: boolean) {
+    this.paused = coerceBooleanProperty(value);
+
+    if (this.initialized && !this.disabled) {
+      this.replay$.next(!this.paused);
+    }
+  }
   public paused: boolean = false;
 
   /** When defined, triggers the animation on element scrolling in the viewport by the specified amount. Amount defaults to 50% when not specified */
-  @Input('aos') set enableAOS(value: number) { this.threshold = coerceNumberProperty(value, 0.5); }
+  @Input('aos') set enableAOS(value: number) {
+    const threshold = coerceNumberProperty(value, 0.5);
+    this.threshold = Math.max(0, Math.min(1, threshold));
+  }
   private threshold: number = 0;
 
   /** When true, triggers the animation on element scrolling in the viewport */
@@ -118,16 +146,47 @@ export class AnimateComponent implements OnInit, OnDestroy {
   @Input() set replay(replay: any) {
 
     // Re-triggers the animation again on request (skipping the very fist value)
-    if(!!this.trigger && coerceBooleanProperty(replay)) {
+    if (!!this.trigger && coerceBooleanProperty(replay)) {
 
       this.trigger = this.idle;
-      this.replay$.next(true);
+      if (!this.paused && !this.disabled) {
+        this.replay$.next(true);
+      }
     }
   }
 
   ngOnInit() {
+    this.prefersReducedMotion = typeof window !== 'undefined' &&
+      typeof window.matchMedia === 'function' &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    this.updateDisabledState();
+    this.initialized = true;
+
+    if (this.disabled) {
+      // Disabled/reduced-motion content must remain visible instead of being
+      // left in an idle entrance state with opacity: 0.
+      this.trigger = this.play;
+      this.animated = true;
+      return;
+    }
+
     // Sets the idle state for the given animation
     this.trigger = this.idle;
+    this.startListening();
+  }
+
+  ngOnDestroy() {
+    if (this.sub) {
+      this.sub.unsubscribe();
+    }
+    this.replay$.complete();
+  }
+
+  private startListening() {
+    if (this.sub || this.disabled) {
+      return;
+    }
+
     // Triggers the animation based on the input flags
     this.sub = this.replay$.pipe(
       // Waits the next round to re-trigger
@@ -136,16 +195,47 @@ export class AnimateComponent implements OnInit, OnDestroy {
       startWith(!this.paused),
       // Builds the AOS observable from the common service
       this.scroll.trigger(this.elm, this.threshold),
-      // Prevents false visibility blinks due to the animation transformations
-      filter( trigger => !this.animating ),
       // Stops after the first on trigger when 'once' is set
       takeWhile(trigger => !trigger || !this.once, true),
 
     ).subscribe( trigger => {
-      // Triggers the animation to play or to idle
-      this.trigger = trigger ? this.play : this.idle;
+      this.setTrigger(trigger);
     });
   }
 
-  ngOnDestroy() { this.sub.unsubscribe(); }
+  private setTrigger(shouldPlay: boolean) {
+    if (this.animating) {
+      this.pendingTrigger = shouldPlay;
+      return;
+    }
+
+    this.trigger = shouldPlay ? this.play : this.idle;
+  }
+
+  private updateDisabledState() {
+    this.disabled = this.inputDisabled || this.prefersReducedMotion;
+
+    if (!this.initialized) {
+      return;
+    }
+
+    if (this.disabled) {
+      if (this.sub) {
+        this.sub.unsubscribe();
+        this.sub = null;
+      }
+      this.pendingTrigger = null;
+      this.trigger = this.play;
+      this.animated = true;
+    }
+    else {
+      if (!this.sub) {
+        this.trigger = this.idle;
+        this.startListening();
+      }
+      else {
+        this.replay$.next(!this.paused);
+      }
+    }
+  }
 }
