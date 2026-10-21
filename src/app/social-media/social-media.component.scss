@@ -11,6 +11,10 @@
   margin: 0 10px;           /* Ajoute de l'espace entre les icônes */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Ajoute une transition pour l'effet hover */
   text-decoration: none;    /* Enlève la décoration de texte par défaut */
+  display: inline-flex;
+  padding: 0;
+  border: 0;
+  background: transparent;
 }
 
 .icon-button i {
@@ -48,13 +52,24 @@
 }
 
 /* Effet Hover avec Transition */
-.icon-button:hover i {
+.icon-button:not(.icon-button-disabled):hover i {
   transform: scale(1.1); /* Légèrement agrandir l'icône */
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Augmenter l'ombre au survol */
 }
 
-.icon-button i:hover {
+.icon-button:not(.icon-button-disabled) i:hover {
   background-color: #555; /* Change la couleur de fond au survol */
+}
+
+.icon-button-disabled {
+  opacity: 0.42;
+  cursor: not-allowed;
+}
+
+.icon-button-disabled i {
+  cursor: not-allowed;
+  filter: grayscale(0.55);
+  box-shadow: none;
 }
 
 /* Media Query pour Petits Écrans */

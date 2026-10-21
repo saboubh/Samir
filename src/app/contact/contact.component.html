@@ -4,10 +4,13 @@
       <h1 class="heading contact-title">{{ contactInfo.title | translate }}</h1>
       <p class="subTitle contact-subtitle">{{ contactInfo.subtitle | translate }}</p>
       <div class="contact-text-div">
-        <a class="contact-detail" href="{{ 'tel:' + contactInfo.number }}">{{ contactInfo.number }}</a>
+        <button type="button" class="contact-detail contact-detail-disabled" disabled>
+          {{ contactInfo.number }}
+        </button>
         <br><br>
-        <a class="contact-detail-email" href="{{ 'mailto:' + contactInfo.email_address }}">
-          {{ contactInfo.email_address }}</a>
+        <a class="contact-detail-email" [href]="'mailto:' + contactInfo.email_address">
+          {{ contactInfo.email_address }}
+        </a>
         <br><br>
         <app-social-media></app-social-media>
       </div>
