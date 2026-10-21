@@ -1,32 +1,125 @@
+:host {
+  display: block;
+}
+
 .main {
-  padding-top: 120px; /* Ajustez en fonction de la hauteur réelle de l'en-tête */
-  margin-top: 0px; /* Supprimez le margin-top si le padding-top est suffisant */
+  box-sizing: border-box;
+  width: min(calc(100% - 2rem), 1280px);
+  margin: 0 auto;
+  padding: clamp(6rem, 9vw, 8rem) 0 3rem;
 }
 
 .skills-main-div {
-  display: flex;
-  padding-bottom: 40px; /* Ajoutez un peu de padding pour l'espace */
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(430px, .92fr);
+  gap: clamp(2rem, 4vw, 4.5rem);
+  padding: clamp(1.5rem, 4vw, 3.5rem);
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 8% 4%, rgba(124, 58, 237, .12), transparent 31%),
+    linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid rgba(148, 163, 184, .24);
+  border-radius: 2rem;
+  box-shadow: 0 28px 70px rgba(15, 23, 42, .09);
 }
 
-.skills-main-div > * {
-  flex: 1;
-  margin-bottom: 10px; /* Réduire la marge pour minimiser l'espace vide */
+.skills-text-div,
+.skills-image-div {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
 }
 
-.skills-text-div {
-  margin-left: 50px;
+.skills-eyebrow {
+  margin: 0 0 .8rem;
+  color: #6d28d9;
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .16em;
+}
+
+.skills-heading {
+  margin: 0;
+  color: #111827;
+  font-size: clamp(2.5rem, 5vw, 4.7rem);
+  font-weight: 700;
+  letter-spacing: -.045em;
+  line-height: 1;
+}
+
+.skills-text-subtitle {
+  max-width: 62ch;
+  margin: 1.25rem 0 1.75rem;
+  color: #64748b;
+  font-size: clamp(1rem, 1.6vw, 1.12rem);
+  line-height: 1.7;
+}
+
+.skills-list {
+  display: grid;
+  gap: .75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skills-list li {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr);
+  gap: .8rem;
+  padding: .9rem 1rem;
+  align-items: start;
+  background: rgba(255, 255, 255, .82);
+  border: 1px solid rgba(148, 163, 184, .22);
+  border-radius: 1rem;
+}
+
+.skills-list p {
+  margin: 0;
+  color: #334155;
+  font-size: .94rem;
+  line-height: 1.55;
+}
+
+.skill-check {
+  display: inline-grid;
+  width: 2rem;
+  height: 2rem;
+  color: #ffffff;
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+  border-radius: .7rem;
+  place-items: center;
+  box-shadow: 0 6px 16px rgba(109, 40, 217, .2);
+}
+
+.skill-check i {
+  font-size: .75rem;
+}
+
+@media (max-width: 1080px) {
+  .skills-main-div {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 768px) {
   .main {
-    padding-top: 60px; /* Moins de padding pour les petits écrans */
+    width: min(calc(100% - 1rem), 1280px);
+    padding-top: 5.5rem;
   }
+
   .skills-main-div {
-    flex-direction: column;
-    padding-bottom: 20px;
+    gap: 1.5rem;
+    padding: 1.25rem;
+    border-radius: 1.5rem;
   }
-  .skills-text-div {
-    margin-left: 0px;
-    margin: 20px;
+
+  .skills-heading {
+    font-size: clamp(2.35rem, 12vw, 3.4rem);
+  }
+
+  .skills-list li {
+    padding: .8rem;
   }
 }

@@ -22,21 +22,33 @@
   
   "skillsSection": {
     "title": "My Expertise",
-    "subTitle": "Passionate Full Stack Developer eager to explore and master diverse technology stacks to create innovative solutions.",
+    "subTitle": "I build reliable, multi-vendor traceability platforms from field hardware to live business applications, without limiting the solution to a single manufacturer.",
     "skills": [
-      "✨ Develop highly interactive front-end/user interfaces for web and mobile applications using Angular, React, and Flutter",
-      "✨ Create robust application backends with Node.js, Express, and Spring Boot",
-      "✨ Design and implement Progressive Web Applications (PWA) in both standard and single-page application (SPA) stacks",
-      "✨ Integrate third-party services such as Firebase and AWS for enhanced application functionality",
-      "✨ Optimize application performance and ensure smooth deployment to production environments",
-      "✨ Collaborate with design teams to integrate new designs and enhance user experience",
-      "✨ Perform unit and server testing to ensure application reliability",
-      "✨ Develop secure authentication and authorization systems",
-      "✨ Write and execute complex SQL queries for data management and retrieval",
-      "✨ Participate in code reviews and brainstorming sessions to foster continuous improvement and innovation",
-      "✨ Manage real-time communication using WebSocket protocols for interactive applications",
-      "✨ Utilize DevOps practices for continuous integration and deployment (CI/CD)"
-    ]
+      "Design end-to-end, multi-vendor traceability architectures spanning RFID/IoT hardware, tags, edge/CAP services, mobile, web, APIs, databases, cloud and deployment.",
+      "Integrate UHF/RAIN RFID fixed readers, including Impinj R720, R700, Speedway R420/R220, R600 and xSpan, alongside other vendors selected for each site.",
+      "Connect Zebra handheld and fixed RFID devices—including RFD90/RFD9030/RFD9090, RFD40, RFD8500, FXR90, FX9600 and FX7500—and comparable hardware from other manufacturers.",
+      "Connect multi-vendor IoT trackers, including Digital Matter Manta Fusion, Dart3 BLE, Oyster3, Remora3, Yabby3 and G150, with GPS/BLE telemetry.",
+      "Develop iOS and Android applications, plus edge/CAP services, that communicate directly with RFID readers and mobile terminals.",
+      "Deliver real-time indoor/outdoor traceability with event pipelines, secure APIs, databases, dashboards, alerts and live maps."
+    ],
+    "iconPanel": {
+      "eyebrow": "FIELD · EDGE · CLOUD",
+      "title": "RFID, IoT & full-stack ecosystem",
+      "items": {
+        "rfid": "UHF / RAIN RFID",
+        "tags": "RFID tags",
+        "fixedReaders": "Impinj & fixed readers",
+        "mobileReaders": "Zebra & mobile RFID",
+        "iot": "Digital Matter & IoT",
+        "tracking": "GPS / BLE tracking",
+        "ios": "iOS applications",
+        "android": "Android applications",
+        "edge": "Edge / CAP",
+        "backend": "APIs & back-end",
+        "data": "Databases & cloud",
+        "maps": "Live indoor/outdoor maps"
+      }
+    }
   },
   
   "timeline": {

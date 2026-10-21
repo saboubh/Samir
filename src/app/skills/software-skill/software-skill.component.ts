@@ -1,82 +1,73 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-software-skill',
   templateUrl: './software-skill.component.html',
   styleUrls: ['./software-skill.component.scss']
 })
-export class SoftwareSkillComponent implements OnInit {
-  skillsSection = {
+export class SoftwareSkillComponent {
+  readonly skillsSection = {
     softwareSkills: [
       {
-        skillName: "html-5",
-        fontAwesomeClassname: "fab fa-html5"
+        labelKey: "skillsSection.iconPanel.items.rfid",
+        fontAwesomeClassname: "fas fa-broadcast-tower",
+        tone: "violet"
       },
       {
-        skillName: "css3",
-        fontAwesomeClassname: "fab fa-css3-alt"
+        labelKey: "skillsSection.iconPanel.items.tags",
+        fontAwesomeClassname: "fas fa-tags",
+        tone: "cyan"
       },
       {
-        skillName: "sass",
-        fontAwesomeClassname: "fab fa-sass"
+        labelKey: "skillsSection.iconPanel.items.fixedReaders",
+        fontAwesomeClassname: "fas fa-wifi",
+        tone: "blue"
       },
       {
-        skillName: "JavaScript",
-        fontAwesomeClassname: "fab fa-js"
+        labelKey: "skillsSection.iconPanel.items.mobileReaders",
+        fontAwesomeClassname: "fas fa-barcode",
+        tone: "amber"
       },
       {
-        skillName: "Angularjs",
-        fontAwesomeClassname: "fab fa-angular"
+        labelKey: "skillsSection.iconPanel.items.iot",
+        fontAwesomeClassname: "fas fa-satellite-dish",
+        tone: "violet"
       },
       {
-        skillName: "nodejs",
-        fontAwesomeClassname: "fab fa-node"
+        labelKey: "skillsSection.iconPanel.items.tracking",
+        fontAwesomeClassname: "fas fa-route",
+        tone: "cyan"
       },
       {
-        skillName: "npm",
-        fontAwesomeClassname: "fab fa-npm"
+        labelKey: "skillsSection.iconPanel.items.ios",
+        fontAwesomeClassname: "fab fa-apple",
+        tone: "blue"
       },
       {
-        skillName: "sql-database",
-        fontAwesomeClassname: "fas fa-database"
+        labelKey: "skillsSection.iconPanel.items.android",
+        fontAwesomeClassname: "fab fa-android",
+        tone: "amber"
       },
       {
-        skillName: "python",
-        fontAwesomeClassname: "fab fa-python"
+        labelKey: "skillsSection.iconPanel.items.edge",
+        fontAwesomeClassname: "fas fa-microchip",
+        tone: "violet"
       },
       {
-        skillName: "React",
-        fontAwesomeClassname: "fab fa-react"
+        labelKey: "skillsSection.iconPanel.items.backend",
+        fontAwesomeClassname: "fas fa-server",
+        tone: "cyan"
       },
       {
-        skillName: "Next.js",
-        fontAwesomeClassname: "fab fa-react" // Utilisez la même icône que React car il n'y a pas de fontAwesome spécifique pour Next.js
+        labelKey: "skillsSection.iconPanel.items.data",
+        fontAwesomeClassname: "fas fa-database",
+        tone: "blue"
       },
       {
-        skillName: "Express",
-        fontAwesomeClassname: "fab fa-node" // Utilisez l'icône Node.js car il n'y a pas de fontAwesome spécifique pour Express
-      },
-      {
-        skillName: "Linux",
-        fontAwesomeClassname: "fab fa-linux"
-      },
-   
-     
-      {
-        skillName: "MongoDB",
-        fontAwesomeClassname: "fas fa-database" // Utilisez l'icône de base de données
-      },
-      {
-        skillName: "Firebase",
-        fontAwesomeClassname: "fas fa-fire" // Pas d'icône fontAwesome spécifique, utilisez une icône de feu
+        labelKey: "skillsSection.iconPanel.items.maps",
+        fontAwesomeClassname: "fas fa-map-marked-alt",
+        tone: "amber"
       }
-      
     ]
-  }
-;  
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  };
 }

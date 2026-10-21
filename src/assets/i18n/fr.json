@@ -22,21 +22,33 @@
   
   "skillsSection": {
     "title": "Mon Expertise",
-    "subTitle": "Développeur Full Stack passionné, désireux d'explorer et de maîtriser divers ensembles de technologies pour créer des solutions innovantes.",
+    "subTitle": "Je développe des plateformes de traçabilité multimarques fiables, du matériel terrain jusqu'aux applications métier en direct, sans limiter la solution à un seul fabricant.",
     "skills": [
-      "✨ Développer des interfaces utilisateur interactives pour les applications web et mobiles avec Angular, React et Flutter",
-      "✨ Créer des backends d'application robustes avec Node.js, Express et Spring Boot",
-      "✨ Concevoir et implémenter des Progressive Web Applications (PWA) dans des piles standard et SPA",
-      "✨ Intégrer des services tiers tels que Firebase et AWS pour des fonctionnalités d'application améliorées",
-      "✨ Optimiser les performances des applications et assurer un déploiement fluide dans les environnements de production",
-      "✨ Collaborer avec les équipes de conception pour intégrer de nouveaux designs et améliorer l'expérience utilisateur",
-      "✨ Effectuer des tests unitaires et serveur pour garantir la fiabilité de l'application",
-      "✨ Développer des systèmes d'authentification et d'autorisation sécurisés",
-      "✨ Rédiger et exécuter des requêtes SQL complexes pour la gestion et la récupération des données",
-      "✨ Participer à des revues de code et des sessions de brainstorming pour encourager l'amélioration continue et l'innovation",
-      "✨ Gérer la communication en temps réel en utilisant les protocoles WebSocket pour les applications interactives",
-      "✨ Utiliser des pratiques DevOps pour l'intégration et le déploiement continus (CI/CD)"
-    ]
+      "Concevoir des architectures de traçabilité multimarques de bout en bout : matériel RFID/IoT, tags, services edge/CAP, mobile, web, API, bases de données, cloud et déploiement.",
+      "Intégrer des lecteurs fixes UHF/RAIN RFID, dont Impinj R720, R700, Speedway R420/R220, R600 et xSpan, ainsi que d'autres fabricants choisis selon chaque site.",
+      "Connecter les terminaux et lecteurs RFID Zebra — RFD90/RFD9030/RFD9090, RFD40, RFD8500, FXR90, FX9600 et FX7500 — ainsi que du matériel équivalent d'autres constructeurs.",
+      "Connecter des trackers IoT multimarques, dont Digital Matter Manta Fusion, Dart3 BLE, Oyster3, Remora3, Yabby3 et G150, avec télémétrie GPS/BLE.",
+      "Développer des applications iOS et Android ainsi que des services edge/CAP communiquant directement avec les lecteurs RFID et les terminaux mobiles.",
+      "Fournir une traçabilité indoor/outdoor en temps réel avec pipelines d'événements, API sécurisées, bases de données, tableaux de bord, alertes et cartes en direct."
+    ],
+    "iconPanel": {
+      "eyebrow": "TERRAIN · EDGE · CLOUD",
+      "title": "Écosystème RFID, IoT & full-stack",
+      "items": {
+        "rfid": "RFID UHF / RAIN",
+        "tags": "Tags RFID",
+        "fixedReaders": "Impinj et lecteurs fixes",
+        "mobileReaders": "Zebra et RFID mobile",
+        "iot": "Digital Matter et IoT",
+        "tracking": "Suivi GPS / BLE",
+        "ios": "Applications iOS",
+        "android": "Applications Android",
+        "edge": "Edge / CAP",
+        "backend": "API et back-end",
+        "data": "Bases de données et cloud",
+        "maps": "Cartes indoor/outdoor en direct"
+      }
+    }
   },
   
   "timeline": {

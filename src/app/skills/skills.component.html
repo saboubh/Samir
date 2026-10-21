@@ -1,12 +1,18 @@
 <div class="main" id="skills">
   <div class="skills-main-div">
     <div class="skills-text-div" wmAnimate="fadeInLeft" aos once speed="normal">
+      <p class="skills-eyebrow">RFID · IoT · FULL-STACK</p>
       <h1 class="skills-heading">{{ 'skillsSection.title' | translate }}</h1>
       <p class="subTitle skills-text-subtitle">{{ 'skillsSection.subTitle' | translate }}</p>
 
-      <div *ngFor="let skill of skillsSection.skills">
-        <p class="s">{{ skill | translate }}</p>
-      </div>
+      <ul class="skills-list">
+        <li *ngFor="let skill of skillsSection.skills">
+          <span class="skill-check" aria-hidden="true">
+            <i class="fas fa-check"></i>
+          </span>
+          <p>{{ skill | translate }}</p>
+        </li>
+      </ul>
     </div>
 
     <div class="skills-image-div" wmAnimate="fadeInRight" aos once speed="normal">
