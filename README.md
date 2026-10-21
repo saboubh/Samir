@@ -17,7 +17,7 @@
 ✔️ Open Source Projects Connected with Github\
 ✔️ Contact me\
 ✔️ Github Profile
-To view a live example, **[click here](https://sarthak-agrawal.me/)**
+To view my live portfolio, **[click here](https://saboubh.github.io/Samir/)**
 
 ## Getting Started 🚀
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
